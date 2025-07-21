@@ -9,33 +9,33 @@ const Portfolio = () => {
       <div className="max-w-4xl mx-auto px-6 py-12">
         {/* Header */}
         <header className="mb-12">
-          <h1 className="text-4xl font-semibold text-foreground mb-2">John Doe</h1>
-          <p className="text-xl text-muted-foreground mb-6">Senior Software Engineer</p>
+          <h1 className="text-4xl font-semibold text-foreground mb-2">Kamal Karki</h1>
+          <p className="text-xl text-muted-foreground mb-6">Hello People, I am Kamal Karki. I have experience of working in the deep tech industry and software development</p>
           
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>john.doe@email.com</span>
+              <span>Kamaljungkarki13579@email.com</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>+1 (555) 123-4567</span>
+              <span>+977 9768448066</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>San Francisco, CA</span>
+              <span>Morang, Nepal</span>
             </div>
           </div>
           
           <div className="flex gap-4 mt-4">
             <Button variant="outline" size="sm" asChild>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/kamal-karki-16a926213" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-4 h-4 mr-2" />
                 LinkedIn
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/karkikamal098" target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-2" />
                 GitHub
               </a>
@@ -49,10 +49,7 @@ const Portfolio = () => {
           <Card>
             <CardContent className="p-6">
               <p className="text-foreground leading-relaxed">
-                Experienced software engineer with 8+ years of expertise in full-stack development, 
-                cloud architecture, and team leadership. Passionate about building scalable solutions 
-                and mentoring junior developers. Proven track record of delivering high-quality 
-                products in fast-paced environments.
+                Aerospace Engineer with experience in designing, developing, and testing deep tech solutions. I have also gained experience with software development and have founded a social organization that helped more than 2000 students from remote part of Nepal. Besides, I have founded two startups and is still working on one.
               </p>
             </CardContent>
           </Card>
@@ -67,10 +64,10 @@ const Portfolio = () => {
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-lg font-medium text-foreground">Senior Software Engineer</h3>
-                    <p className="text-accent font-medium">Tech Solutions Inc.</p>
+                    <h3 className="text-lg font-medium text-foreground">Internship</h3>
+                    <p className="text-accent font-medium">Buddha Air Private Limited</p>
                   </div>
-                  <span className="text-sm text-muted-foreground">2021 - Present</span>
+                  <span className="text-sm text-muted-foreground">Dec 2024 - Jan 2025</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
                   <li>Led development of microservices architecture serving 1M+ daily users</li>
@@ -85,10 +82,10 @@ const Portfolio = () => {
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-lg font-medium text-foreground">Software Engineer</h3>
-                    <p className="text-accent font-medium">Digital Innovations Corp</p>
+                    <h3 className="text-lg font-medium text-foreground">Founder</h3>
+                    <p className="text-accent font-medium">Nebulaleap Software Development Company</p>
                   </div>
-                  <span className="text-sm text-muted-foreground">2019 - 2021</span>
+                  <span className="text-sm text-muted-foreground">2024 - Now</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
                   <li>Developed React-based web applications with TypeScript</li>
@@ -103,8 +100,8 @@ const Portfolio = () => {
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-lg font-medium text-foreground">Junior Developer</h3>
-                    <p className="text-accent font-medium">StartupXYZ</p>
+                    <h3 className="text-lg font-medium text-foreground">Founder</h3>
+                    <p className="text-accent font-medium">Insurance Sathy</p>
                   </div>
                   <span className="text-sm text-muted-foreground">2017 - 2019</span>
                 </div>
@@ -126,7 +123,7 @@ const Portfolio = () => {
           <div className="grid gap-6 md:grid-cols-2">
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-lg font-medium text-foreground mb-2">E-commerce Platform</h3>
+                <h3 className="text-lg font-medium text-foreground mb-2">Influence of 3D Printing Parameters on the Strength of Printed Specimens</h3>
                 <p className="text-muted-foreground mb-4">
                   Full-stack e-commerce solution with payment processing, inventory management, 
                   and analytics dashboard.
@@ -217,23 +214,21 @@ const Portfolio = () => {
         {/* Articles */}
         <section className="mb-12">
           <h2 className="text-2xl font-medium text-foreground mb-6">Articles & Writing</h2>
-          
           <div className="space-y-4">
             <Card>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
                     <h3 className="text-lg font-medium text-foreground mb-2">
-                      Building Scalable Microservices with Node.js
+                      ARP4754(A) & ARP4761(A)
                     </h3>
                     <p className="text-muted-foreground mb-3">
-                      A comprehensive guide to designing and implementing microservices 
-                      architecture for high-traffic applications.
+                      ARP4754 is guidelines for Development of Civil Aircraft and Systems that deal with the development processes which support certification of Aircraft systems addressing from the complete aircraft development cycle, from system requirements through systems verification.
                     </p>
-                    <span className="text-sm text-muted-foreground">Published on Medium • March 2024</span>
+                    <span className="text-sm text-muted-foreground">Published on Medium • May 2025</span>
                   </div>
                   <Button variant="outline" size="sm" asChild>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://medium.com/@kamaljungkarki13579/arp4754-arp4761-a-e28a7c1f45e8" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Read Article
                     </a>
@@ -242,44 +237,26 @@ const Portfolio = () => {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex justify-between items-start">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-medium text-foreground mb-2">
-                      React Performance Optimization Techniques
-                    </h3>
-                    <p className="text-muted-foreground mb-3">
-                      Practical strategies for improving React application performance 
-                      and user experience.
-                    </p>
-                    <span className="text-sm text-muted-foreground">Published on Dev.to • January 2024</span>
-                  </div>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Read Article
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
 
             <Card>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
                     <h3 className="text-lg font-medium text-foreground mb-2">
-                      Database Design Patterns for Modern Applications
+                      A beginner guide to the Pytest:
                     </h3>
                     <p className="text-muted-foreground mb-3">
-                      Exploring different database design patterns and when to use 
-                      them in modern web applications.
+                      Topics covered:
+Python setup,
+Virtual Environment setup,
+pytest setup,
+File setup,
+Working with some basic syntax
                     </p>
-                    <span className="text-sm text-muted-foreground">Published on Hashnode • November 2023</span>
+                    <span className="text-sm text-muted-foreground">Published on Medium • Apr 2025</span>
                   </div>
                   <Button variant="outline" size="sm" asChild>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://medium.com/@kamaljungkarki13579/a-beginner-guide-to-the-pytest-35149b4c07bc" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Read Article
                     </a>
@@ -293,7 +270,7 @@ const Portfolio = () => {
         <Separator className="my-8" />
         
         <footer className="text-center text-muted-foreground">
-          <p>© 2024 John Doe. All rights reserved.</p>
+          <p>© 2025 Kamal Karki. All rights reserved.</p>
         </footer>
       </div>
     </div>

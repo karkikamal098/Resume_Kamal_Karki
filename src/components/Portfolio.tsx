@@ -10,7 +10,7 @@ const Portfolio = () => {
         {/* Header */}
         <header className="mb-12">
           <h1 className="text-4xl font-semibold text-foreground mb-2">Kamal Karki</h1>
-          <p className="text-xl text-muted-foreground mb-6">Hello People, I am Kamal Karki. I have experience of working in the deep tech industry and software development</p>
+          {/* <p className="text-xl text-muted-foreground mb-6">Hello People, I am Kamal Karki. I have experience of working in the deep tech industry and software development</p> */}
           
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">

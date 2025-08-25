@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig(({ mode }) => ({
   // This is the crucial line for GitHub Pages deployment.
   // It tells Vite that your project will be in a subfolder.
-  base: "/Resume_Kamal_Karki/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,

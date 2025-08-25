@@ -17,10 +17,10 @@ const Portfolio = () => {
               <Mail className="w-4 h-4" />
               <span>Kamaljungkarki13579@email.com</span>
             </div>
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
               <span>+977 9768448066</span>
-            </div>
+            </div> */}
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
               <span>Morang, Nepal</span>
@@ -49,7 +49,7 @@ const Portfolio = () => {
           <Card>
             <CardContent className="p-6">
               <p className="text-foreground leading-relaxed">
-                Aerospace Engineer with experience in designing, developing, and testing deep tech solutions. I have also gained experience with software development and have founded a social organization that helped more than 2000 students from remote part of Nepal. Besides, I have founded two startups and is still working on one.
+                Aerospace Engineer with experience in designing, developing, and testing deep tech solutions. I have hands-on experience with software development and automation. Besides, I have also founded a social organization to teach students of remote schools in Nepal with the robotics and other other applicable engineering. And, I am also the founder of <span className="font-semibold">Nebulaleap Technology Private Limited</span> based in Nepal.
               </p>
             </CardContent>
           </Card>
@@ -60,6 +60,23 @@ const Portfolio = () => {
           <h2 className="text-2xl font-medium text-foreground mb-6">Work Experience</h2>
           
           <div className="space-y-6">
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h3 className="text-lg font-medium text-foreground">Internship</h3>
+                    <p className="text-accent font-medium">Airbus India Private Limited</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground">July 30 - Now</span>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-foreground">
+                  <li>Working on the Flight warning system to enhance safety and reliability.</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+
             <Card>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
@@ -70,10 +87,8 @@ const Portfolio = () => {
                   <span className="text-sm text-muted-foreground">Dec 2024 - Jan 2025</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Led development of microservices architecture serving 1M+ daily users</li>
-                  <li>Mentored team of 5 junior developers and conducted code reviews</li>
-                  <li>Reduced system latency by 40% through performance optimization</li>
-                  <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                  <li>Worked on the end to end maintenance of the aircraft structures, and other parts.</li>
+                  <li>Worked with the composites materials that could be used in the deicing parts of the aircraft.</li>
                 </ul>
               </CardContent>
             </Card>
@@ -83,12 +98,12 @@ const Portfolio = () => {
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h3 className="text-lg font-medium text-foreground">Founder</h3>
-                    <p className="text-accent font-medium">Nebulaleap Software Development Company</p>
+                    <p className="text-accent font-medium">Nebulaleap Technology Private Limited</p>
                   </div>
                   <span className="text-sm text-muted-foreground">2024 - Now</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Developed React-based web applications with TypeScript</li>
+                  <li>Served 10+ clients in various industries</li>
                   <li>Built RESTful APIs using Node.js and Express</li>
                   <li>Collaborated with designers to implement responsive UI/UX designs</li>
                   <li>Participated in agile development processes and sprint planning</li>
@@ -106,10 +121,8 @@ const Portfolio = () => {
                   <span className="text-sm text-muted-foreground">2017 - 2019</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Developed web applications using JavaScript and Python</li>
-                  <li>Maintained and improved existing codebase</li>
-                  <li>Worked closely with senior developers to learn best practices</li>
-                  <li>Contributed to documentation and testing processes</li>
+                  <li>Research and the development of innovative insurance solutions.</li>
+                  <li>Work on the collaboration with various stakeholders to enhance product offerings.</li>
                 </ul>
               </CardContent>
             </Card>
@@ -125,25 +138,23 @@ const Portfolio = () => {
               <CardContent className="p-6">
                 <h3 className="text-lg font-medium text-foreground mb-2">Influence of 3D Printing Parameters on the Strength of Printed Specimens</h3>
                 <p className="text-muted-foreground mb-4">
-                  Full-stack e-commerce solution with payment processing, inventory management, 
-                  and analytics dashboard.
+                  Research on how different 3D printing parameters affect the mechanical properties of printed materials. Research involved printing temperature, printing speed, and printing density to determine their impact on tensile strength, compressive strength, and impact resistance.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">React</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Node.js</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">PostgreSQL</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">AWS</span>
+                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Pandas</span>
+                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Materials Science</span>
+                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">3D Printing</span>
                 </div>
-                <Button variant="outline" size="sm" asChild>
+                {/* <Button variant="outline" size="sm" asChild>
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     View Project
                   </a>
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
 
-            <Card>
+            {/* <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-medium text-foreground mb-2">Task Management App</h3>
                 <p className="text-muted-foreground mb-4">
@@ -163,9 +174,9 @@ const Portfolio = () => {
                   </a>
                 </Button>
               </CardContent>
-            </Card>
+            </Card> */}
 
-            <Card>
+            {/* <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-medium text-foreground mb-2">Data Visualization Dashboard</h3>
                 <p className="text-muted-foreground mb-4">
@@ -185,9 +196,9 @@ const Portfolio = () => {
                   </a>
                 </Button>
               </CardContent>
-            </Card>
+            </Card> */}
 
-            <Card>
+            {/* <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-medium text-foreground mb-2">Mobile Banking App</h3>
                 <p className="text-muted-foreground mb-4">
@@ -207,7 +218,7 @@ const Portfolio = () => {
                   </a>
                 </Button>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </section>
 

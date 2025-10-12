@@ -49,7 +49,9 @@ const Portfolio = () => {
           <Card>
             <CardContent className="p-6">
               <p className="text-foreground leading-relaxed">
-                Aerospace Engineer with experience in designing, developing, and testing deep tech solutions. I have hands-on experience with software development and automation. Besides, I have also founded a social organization to teach students of remote schools in Nepal with the robotics and other other applicable engineering. And, I am also the founder of <span className="font-semibold">Nebulaleap Technology Private Limited</span>.
+                Aerospace Engineer with experience in designing, developing, and testing deep tech solutions. I have hands-on experience with software development and automation. Besides, I have also founded a social organization to teach students of remote schools in Nepal with the robotics and other other applicable engineering. 
+                {/* And, I am also the founder of <span className="font-semibold">Nebulaleap Technology Private Limited */}
+                </span>.
               </p>
             </CardContent>
           </Card>

@@ -93,7 +93,7 @@ const Portfolio = () => {
               </CardContent>
             </Card>
 
-            <Card>
+            {/* <Card>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
@@ -109,7 +109,7 @@ const Portfolio = () => {
                   <li>Participated in agile development processes and sprint planning</li>
                 </ul>
               </CardContent>
-            </Card>
+            </Card> */}
 
             <Card>
               <CardContent className="p-6">
@@ -118,11 +118,11 @@ const Portfolio = () => {
                     <h3 className="text-lg font-medium text-foreground">Founder</h3>
                     <p className="text-accent font-medium">Insurance Sathy</p>
                   </div>
-                  <span className="text-sm text-muted-foreground">2017 - 2019</span>
+                  <span className="text-sm text-muted-foreground">2022 - 2023</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Research and the development of innovative insurance solutions.</li>
-                  <li>Work on the collaboration with various stakeholders to enhance product offerings.</li>
+                  <li>Researched different Insurance services for providing innovative aggregrator solution.</li>
+                  <li>Developed effective search service for providing crystal clear information and comparision about the insurance policies.</li>
                 </ul>
               </CardContent>
             </Card>

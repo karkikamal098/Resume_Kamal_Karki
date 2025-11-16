@@ -53,7 +53,7 @@ const Portfolio = () => {
     href="https://www.facebook.com/profile.php?id=100088403617028" 
     target="_blank" 
     rel="noopener noreferrer"
-    className="underline text-blue-600"
+    className="text-blue-600"
   >
     साक्षर नेपाल
   </a>
@@ -184,195 +184,90 @@ robot parts.
             </Card> 
 
             
-
-           
-
-            {/* <Card>
-              <CardContent className="p-6">
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="text-lg font-medium text-foreground">Founder</h3>
-                    <p className="text-accent font-medium">Insurance Sathy</p>
-                  </div>
-                  <span className="text-sm text-muted-foreground">2022 - 2023</span>
-                </div>
-                <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Researched different Insurance services for providing innovative aggregrator solution.</li>
-                  <li>Developed effective search service for providing crystal clear information and comparision about the insurance policies.</li>
-                </ul>
-              </CardContent>
-            </Card> */}
-            
           </div>
         </section>
+{/* Projects */}
+<section className="mb-12">
+  <h2 className="text-2xl font-medium text-foreground mb-6">Featured Projects</h2>
+  
+  <div className="grid grid-cols-1 gap-6">
 
-        {/* Projects */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-medium text-foreground mb-6">Featured Projects</h2>
-          
-          <div className="grid gap-6 md:grid-cols-2">
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-medium text-foreground mb-2">Research on effect of printing parameters and reinforcement in the 3d-printed PLA+</h3>
-                <p className="text-muted-foreground mb-4">
-                  This research was focused on investigation of effect of printing parameters and reinforcement on the mechanical
-properties of 3d printed polylactic acid(pla+) composities. Specimens were fabricated in compliance with ASTM D638,
-D695, and BS-2782 part III standards, while Bambu Studio 3d printer was used to print the specimen. The results
-demonstrate that the printing temperature in range of 220C, printing density in the order of 80% and Rectilinear
-printing pattern is most effective for tensile strength. Also, We found that 90% infill provides the highest compressive
-strength (20.93 MPa), making it ideal for applications requiring maximum load-bearing capacity under compression.
-Further, The impact test results revealed that different infill patterns influenced impact resistance, with the honeycomb
-pattern exhibiting the highest energy absorption capacity, followed by gyroid and rectilinear patterns
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Pandas</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Materials Science</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">3D Printing</span>
-                </div>
-                {/* <Button variant="outline" size="sm" asChild>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
-                  </a>
-                </Button> */}
-              </CardContent>
-            </Card>
+    <Card>
+      <CardContent className="p-6">
+        <h3 className="text-lg font-medium text-foreground mb-2">
+          Research on effect of printing parameters and reinforcement in the 3D-printed PLA+
+        </h3>
+        <p className="text-muted-foreground mb-4">
+          This research was focused on investigation of effect of printing parameters and reinforcement on the mechanical
+          properties of 3D printed polylactic acid (PLA+) composites. Specimens were fabricated in compliance with ASTM D638,
+          D695, and BS-2782 Part III standards, and printed using a Bambu Studio 3D printer. The results demonstrate that a
+          printing temperature around 220°C, ~80% printing density, and a rectilinear pattern provide the most effective
+          tensile strength. We also found that 90% infill gives the highest compressive strength (20.93 MPa), making it ideal
+          for high load-bearing applications. Impact test results showed honeycomb infill absorbing the highest energy,
+          followed by gyroid and rectilinear patterns.
+        </p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Pandas</span>
+          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Materials Science</span>
+          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">3D Printing</span>
+        </div>
+      </CardContent>
+    </Card>
 
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-medium text-foreground mb-2">Design, Test and Analysis of the mid-range, general-purpose commercial aircraft, powered by twin
-turbofan engines.</h3>
-                <p className="text-muted-foreground mb-4">
-Designed the aircraft using Plane-Maker and imported the model into X-Plane’s flight simulator for evaluation.Adjusted payload and fuel load to analyze aircraft performance under different conditions.
-Conducted simulated test flights to evaluate the aircraft’s stability, control characteristics, and overall flight behavior.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Aircraft Design</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">X-Plane</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Aircraft Stability & Control</span>
-                </div>
-                {/* <Button variant="outline" size="sm" asChild>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
-                  </a>
-                </Button> */}
-              </CardContent>
-            </Card>
+    <Card>
+      <CardContent className="p-6">
+        <h3 className="text-lg font-medium text-foreground mb-2">
+          Design, Test and Analysis of a Mid-Range General-Purpose Commercial Aircraft Powered by Twin Turbofan Engines
+        </h3>
+        <p className="text-muted-foreground mb-4">
+          Designed the aircraft using Plane-Maker and imported the model into X-Plane’s flight simulator for testing.
+          Adjusted payload and fuel load to analyze performance under various conditions. Conducted simulated test flights
+          to evaluate stability, control characteristics, and overall flight behavior.
+        </p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Aircraft Design</span>
+          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">X-Plane</span>
+          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Stability & Control</span>
+        </div>
+      </CardContent>
+    </Card>
 
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-medium text-foreground mb-2">Aerodynamic Analysis of Canard Fins for Missiles: Effects of Sweep Angle on Lift and Drag</h3>
-                <p className="text-muted-foreground mb-4">
-In this research, the impact of canard sweep angles on missile aerodynamics was investigated, specifically focusing on
-variations from 40 to 80 degrees. This methodology involves CAD modeling in CATIA V5 and computational fluid
-dynamics (CFD) simulations in ANSYS 2023 R1. Sweep angle significantly affects both lift and drag characteristics of
-canard fins in missile aerodynamics. There exists an optimal sweep angle range where lift is maximized without
-introducing excessive drag. Beyond the optimal sweep angle, further increases in sweep angle can lead to a decrease
-in lift and an increase in drag.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Aerodynamics Analysis</span>
-                </div>
-                {/* <Button variant="outline" size="sm" asChild>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
-                  </a>
-                </Button> */}
-              </CardContent>
-            </Card>
+    <Card>
+      <CardContent className="p-6">
+        <h3 className="text-lg font-medium text-foreground mb-2">
+          Aerodynamic Analysis of Canard Fins for Missiles: Effects of Sweep Angle on Lift and Drag
+        </h3>
+        <p className="text-muted-foreground mb-4">
+          Investigated sweep angle variations from 40° to 80° using CAD modeling in CATIA V5 and CFD simulations in ANSYS 2023
+          R1. Results show that sweep angle significantly influences lift and drag. An optimal range exists where lift is
+          maximized without excessive drag. Beyond that, increased sweep angle reduces lift and increases drag.
+        </p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Aerodynamic Analysis</span>
+        </div>
+      </CardContent>
+    </Card>
 
+    <Card>
+      <CardContent className="p-6">
+        <h3 className="text-lg font-medium text-foreground mb-2">
+          Design and Flight Testing of a Blended Wing Body (BWB) Aircraft
+        </h3>
+        <p className="text-muted-foreground mb-4">
+          Designed the BWB aircraft model in CATIA V5 and manufactured the body using foam. Integrated essential electronics
+          including BLDC motors, RC receiver, servo motors, Li-Po battery, and ESC for power and control systems. Successfully
+          test-flew the prototype.
+        </p>
+        <div className="flex flex-wrap gap-2 mb-4">
+          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Basic CAD Design</span>
+          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Basic Electronics</span>
+        </div>
+      </CardContent>
+    </Card>
 
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-medium text-foreground mb-2">Design and Fly of BWB plane</h3>
-                <p className="text-muted-foreground mb-4">
- Designed the BWB aircraft model in CATIA V5. Manufactured the aircraft body using foam, Integrated essential electronic components, including the Brushless
-DC motors, RC receiver, digital servo motors, LIPO, and ESC, to establish the control system and power supply. Successfully tested and flew the prototype
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                   <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Basic CAD Design</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Basic Electronics</span>
-                </div>
-                {/* <Button variant="outline" size="sm" asChild>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
-                  </a>
-                </Button> */}
-              </CardContent>
-            </Card>
-            
-            
-            
-            {/* <Card>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-medium text-foreground mb-2">Task Management App</h3>
-                <p className="text-muted-foreground mb-4">
-                  Collaborative task management application with real-time updates, 
-                  file sharing, and project tracking.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Vue.js</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Express</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">MongoDB</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Socket.io</span>
-                </div>
-                <Button variant="outline" size="sm" asChild>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
-                  </a>
-                </Button>
-              </CardContent>
-            </Card> */}
+  </div>
+</section>
 
-            {/* <Card>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-medium text-foreground mb-2">Data Visualization Dashboard</h3>
-                <p className="text-muted-foreground mb-4">
-                  Interactive dashboard for business analytics with real-time data 
-                  processing and custom reporting features.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Python</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Django</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">D3.js</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Redis</span>
-                </div>
-                <Button variant="outline" size="sm" asChild>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
-                  </a>
-                </Button>
-              </CardContent>
-            </Card> */}
-
-            {/* <Card>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-medium text-foreground mb-2">Mobile Banking App</h3>
-                <p className="text-muted-foreground mb-4">
-                  Secure mobile banking application with biometric authentication, 
-                  transaction history, and budget tracking.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">React Native</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Firebase</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">GraphQL</span>
-                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">TypeScript</span>
-                </div>
-                <Button variant="outline" size="sm" asChild>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
-                  </a>
-                </Button>
-              </CardContent>
-            </Card> */}
-          </div>
-        </section>
 
         {/* Articles */}
         <section className="mb-12">

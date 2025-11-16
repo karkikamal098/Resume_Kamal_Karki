@@ -49,9 +49,15 @@ const Portfolio = () => {
           <Card>
             <CardContent className="p-6">
               <p className="text-foreground leading-relaxed">
-                Aerospace Engineer with experience in designing, developing, and validation and verifying deep tech solutions. I have hands-on experience with software and automation development. Besides, I have also founded a social organization to teach students of remote schools in Nepal with the robotics and other other applicable engineering, "https://www.facebook.com/profile.php?id=100088403617028". 
+                Aerospace Engineer with experience in designing, developing, and validation and verifying deep tech solutions. I have hands-on experience with software and automation development. Besides, I have also founded a social organization to teach students of remote schools in Nepal with the robotics and other other applicable engineering, <a 
+    href="https://www.facebook.com/profile.php?id=100088403617028" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="underline text-blue-600"
+  >
+    साक्षर नेपाल
+  </a>. 
                 {/* And, I am also the founder of <span className="font-semibold">Nebulaleap Technology Private Limited */}
-                </span>.
               </p>
             </CardContent>
           </Card>
@@ -106,9 +112,9 @@ safety.</li>
                   <span className="text-sm text-muted-foreground">Dec 2024 - Jan 2025</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>• Performed maintenance on ATR-42/72 aircraft, ensuring airworthiness and compliance with aviation safety
+                  <li>Performed maintenance on ATR-42/72 aircraft, ensuring airworthiness and compliance with aviation safety
 standards.</li>
-                  <li> Conducted wheel and brake assembly, inspection, and maintenance, using specialized tools to verify tire and
+                  <li>Conducted wheel and brake assembly, inspection, and maintenance, using specialized tools to verify tire and
 brake wear for operational reliability.</li>
                   <li>Repaired de-icing boots, troubleshooting and restoring critical systems to maintain aircraft performance in
 adverse conditions. </li>

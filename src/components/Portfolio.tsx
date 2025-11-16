@@ -49,7 +49,7 @@ const Portfolio = () => {
           <Card>
             <CardContent className="p-6">
               <p className="text-foreground leading-relaxed">
-                Aerospace Engineer with experience in designing, developing, and testing deep tech solutions. I have hands-on experience with software development and automation. Besides, I have also founded a social organization to teach students of remote schools in Nepal with the robotics and other other applicable engineering. 
+                Aerospace Engineer with experience in designing, developing, and validation and verifying deep tech solutions. I have hands-on experience with software and automation development. Besides, I have also founded a social organization to teach students of remote schools in Nepal with the robotics and other other applicable engineering, "https://www.facebook.com/profile.php?id=100088403617028". 
                 {/* And, I am also the founder of <span className="font-semibold">Nebulaleap Technology Private Limited */}
                 </span>.
               </p>
@@ -67,13 +67,30 @@ const Portfolio = () => {
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-lg font-medium text-foreground">Internship</h3>
+                    <h3 className="text-lg font-medium text-foreground">INTERN (FLIGHT WARNING SYSTEM)</h3>
                     <p className="text-accent font-medium">Airbus India Private Limited</p>
                   </div>
                   <span className="text-sm text-muted-foreground">July 30 - Now</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Working on the Flight warning system to enhance safety and reliability.</li>
+                  <li>
+                    Developed an internal automation tool, VERITY, to accelerate the creation of testing procedure documentation.
+                  </li>
+                  <li>
+                    Developing an ML-based tool to improve efficiency when working with SAO sheets (Logical Circuit diagrams).
+                  </li>
+                  <li>
+                    Performed Test Fault Analysis using TSAS.
+                  </li>
+                  <li>
+                  Prepared Test Requirements, developed Test Procedures, and performed analysis for aircraft certification and
+safety.</li>
+                  <li>
+                    Gained knowledge of LRU (Line Replaceable Units) and IMA (Integrated Modular Avionics)
+                  </li>
+                  <li>
+                   Gained exposure to the testing, verification, and validation of the Flight Warning System.
+                  </li>
                 </ul>
               </CardContent>
             </Card>
@@ -89,31 +106,82 @@ const Portfolio = () => {
                   <span className="text-sm text-muted-foreground">Dec 2024 - Jan 2025</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Worked on the end to end maintenance of the aircraft structures, and other parts.</li>
-                  <li>Worked with the composites materials that could be used in the deicing parts of the aircraft.</li>
+                  <li>• Performed maintenance on ATR-42/72 aircraft, ensuring airworthiness and compliance with aviation safety
+standards.</li>
+                  <li> Conducted wheel and brake assembly, inspection, and maintenance, using specialized tools to verify tire and
+brake wear for operational reliability.</li>
+                  <li>Repaired de-icing boots, troubleshooting and restoring critical systems to maintain aircraft performance in
+adverse conditions. </li>
                 </ul>
               </CardContent>
             </Card>
 
-            {/* <Card>
+
+             <Card>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-lg font-medium text-foreground">Founder</h3>
-                    <p className="text-accent font-medium">Nebulaleap Technology Private Limited</p>
+                    <h3 className="text-lg font-medium text-foreground">VICE PRESIDENT</h3>
+                    <p className="text-accent font-medium">MATHS AND PHYSICS SOCIETY (MAPS), PULCHOWK CAMPUS)</p>
                   </div>
-                  <span className="text-sm text-muted-foreground">2024 - Now</span>
+                  <span className="text-sm text-muted-foreground">DEC 2023 – DEC 2024</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Served 10+ clients in various industries</li>
-                  <li>Built RESTful APIs using Node.js and Express</li>
-                  <li>Collaborated with designers to implement responsive UI/UX designs</li>
-                  <li>Participated in agile development processes and sprint planning</li>
+                  <li>Led strategic planning for society initiatives.</li>
+                  <li>Organized National Level Math and Physics Olympiad, and Integration Bee with more than 400+ participants by
+coordinating with team members to ensure successful execution.</li>
                 </ul>
               </CardContent>
-            </Card> */}
+            </Card>
 
-            <Card>
+             <Card>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h3 className="text-lg font-medium text-foreground">INTERN RESEARCH ENGINEER</h3>
+                    <p className="text-accent font-medium">ORION SPACE</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground">MAY 2023 – JUN 2023</span>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-foreground">
+                  <li>Designed and developed the PocketQube Training Kit, a modular educational platform for satellite technology,
+enhancing hands-on learning for students and enthusiasts.</li>
+                  <li> Engineered mechanical components using Catia and fabricated prototypes with 3D printing ensuring precision
+and functionality.</li>
+                  <li>
+                    Conducted testing and validation of kit components, improving design reliability
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+             <Card>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h3 className="text-lg font-medium text-foreground">ROBOTICS ENGINEER</h3>
+                    <p className="text-accent font-medium">ROBOTICS CLUB, PULCHOWK CAMPUS</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground">MAR 2022 – JAN 2023</span>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-foreground">
+                  <li>Designed and developed robots for the ABU Robocon 2022 competition (Delhi, India), focusing on innovative
+mechanical solutions.</li>
+                  <li> Engineered the mechanical design of Robot 'A,' incorporating a dual rotational mechanism to effectively break
+piles, enhancing performance.</li>
+                  <li>
+                     Conducted hands-on mechanical workshops to fabricate components, ensuring precision and functionality of
+robot parts.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card> 
+
+            
+
+           
+
+            {/* <Card>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
@@ -127,7 +195,8 @@ const Portfolio = () => {
                   <li>Developed effective search service for providing crystal clear information and comparision about the insurance policies.</li>
                 </ul>
               </CardContent>
-            </Card>
+            </Card> */}
+            
           </div>
         </section>
 
@@ -138,9 +207,16 @@ const Portfolio = () => {
           <div className="grid gap-6 md:grid-cols-2">
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-lg font-medium text-foreground mb-2">Influence of 3D Printing Parameters on the Strength of Printed Specimens</h3>
+                <h3 className="text-lg font-medium text-foreground mb-2">Research on effect of printing parameters and reinforcement in the 3d-printed PLA+</h3>
                 <p className="text-muted-foreground mb-4">
-                  Research on how different 3D printing parameters affect the mechanical properties of printed materials. Research involved printing temperature, printing speed, and printing density to determine their impact on tensile strength, compressive strength, and impact resistance.
+                  This research was focused on investigation of effect of printing parameters and reinforcement on the mechanical
+properties of 3d printed polylactic acid(pla+) composities. Specimens were fabricated in compliance with ASTM D638,
+D695, and BS-2782 part III standards, while Bambu Studio 3d printer was used to print the specimen. The results
+demonstrate that the printing temperature in range of 220C, printing density in the order of 80% and Rectilinear
+printing pattern is most effective for tensile strength. Also, We found that 90% infill provides the highest compressive
+strength (20.93 MPa), making it ideal for applications requiring maximum load-bearing capacity under compression.
+Further, The impact test results revealed that different infill patterns influenced impact resistance, with the honeycomb
+pattern exhibiting the highest energy absorption capacity, followed by gyroid and rectilinear patterns
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Pandas</span>
@@ -156,6 +232,74 @@ const Portfolio = () => {
               </CardContent>
             </Card>
 
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-lg font-medium text-foreground mb-2">Design, Test and Analysis of the mid-range, general-purpose commercial aircraft, powered by twin
+turbofan engines.</h3>
+                <p className="text-muted-foreground mb-4">
+Designed the aircraft using Plane-Maker and imported the model into X-Plane’s flight simulator for evaluation.Adjusted payload and fuel load to analyze aircraft performance under different conditions.
+Conducted simulated test flights to evaluate the aircraft’s stability, control characteristics, and overall flight behavior.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Aircraft Design</span>
+                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">X-Plane</span>
+                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Aircraft Stability & Control</span>
+                </div>
+                {/* <Button variant="outline" size="sm" asChild>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Project
+                  </a>
+                </Button> */}
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-lg font-medium text-foreground mb-2">Aerodynamic Analysis of Canard Fins for Missiles: Effects of Sweep Angle on Lift and Drag</h3>
+                <p className="text-muted-foreground mb-4">
+In this research, the impact of canard sweep angles on missile aerodynamics was investigated, specifically focusing on
+variations from 40 to 80 degrees. This methodology involves CAD modeling in CATIA V5 and computational fluid
+dynamics (CFD) simulations in ANSYS 2023 R1. Sweep angle significantly affects both lift and drag characteristics of
+canard fins in missile aerodynamics. There exists an optimal sweep angle range where lift is maximized without
+introducing excessive drag. Beyond the optimal sweep angle, further increases in sweep angle can lead to a decrease
+in lift and an increase in drag.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Aerodynamics Analysis</span>
+                </div>
+                {/* <Button variant="outline" size="sm" asChild>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Project
+                  </a>
+                </Button> */}
+              </CardContent>
+            </Card>
+
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="text-lg font-medium text-foreground mb-2">Design and Fly of BWB plane</h3>
+                <p className="text-muted-foreground mb-4">
+ Designed the BWB aircraft model in CATIA V5. Manufactured the aircraft body using foam, Integrated essential electronic components, including the Brushless
+DC motors, RC receiver, digital servo motors, LIPO, and ESC, to establish the control system and power supply. Successfully tested and flew the prototype
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                   <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Basic CAD Design</span>
+                  <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Basic Electronics</span>
+                </div>
+                {/* <Button variant="outline" size="sm" asChild>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Project
+                  </a>
+                </Button> */}
+              </CardContent>
+            </Card>
+            
+            
+            
             {/* <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-medium text-foreground mb-2">Task Management App</h3>

@@ -49,14 +49,14 @@ const Portfolio = () => {
           <Card>
             <CardContent className="p-6">
               <p className="text-foreground leading-relaxed">
-                Aerospace Engineer with experience in designing, developing, and validation and verifying deep tech solutions. I have hands-on experience with software and automation development. Besides, I have also founded a social organization to teach students of remote schools in Nepal with the robotics and other other applicable engineering, <a 
+                Aerospace Engineer with experience in designing, developing, and validating and verifying deep tech solutions. I have hands-on experience with software and automation development. Besides, I have also founded a social organization to teach students of remote schools in Nepal with the robotics and other applicable engineering, <a 
     href="https://www.facebook.com/profile.php?id=100088403617028" 
     target="_blank" 
     rel="noopener noreferrer"
     className="underline text-blue-600"
   >
     साक्षर नेपाल
-  </a>. 
+  </a>
                 {/* And, I am also the founder of <span className="font-semibold">Nebulaleap Technology Private Limited */}
               </p>
             </CardContent>
@@ -128,7 +128,7 @@ adverse conditions. </li>
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h3 className="text-lg font-medium text-foreground">VICE PRESIDENT</h3>
-                    <p className="text-accent font-medium">MATHS AND PHYSICS SOCIETY (MAPS), PULCHOWK CAMPUS)</p>
+                    <p className="text-accent font-medium">MATHS AND PHYSICS SOCIETY (MAPS), PULCHOWK CAMPUS</p>
                   </div>
                   <span className="text-sm text-muted-foreground">DEC 2023 – DEC 2024</span>
                 </div>

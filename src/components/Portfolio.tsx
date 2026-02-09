@@ -69,6 +69,23 @@ const Portfolio = () => {
           
           <div className="space-y-6">
 
+             <Card>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h3 className="text-lg font-medium text-foreground">Associate Engineer</h3>
+                    <p className="text-accent font-medium">Airbus India Private Limited</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground">Feb,2026 - Now</span>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-foreground">
+                  <li>
+                    Design and development of Airspace Cabin of Airbus Aircraft.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
             <Card>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
@@ -90,12 +107,41 @@ const Portfolio = () => {
                   </li>
                   <li>
                   Prepared Test Requirements, developed Test Procedures, and performed analysis for aircraft certification and
-safety.</li>
+                  safety.</li>
                   <li>
                     Gained knowledge of LRU (Line Replaceable Units) and IMA (Integrated Modular Avionics)
                   </li>
                   <li>
                    Gained exposure to the testing, verification, and validation of the Flight Warning System.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+             <Card>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h3 className="text-lg font-medium text-foreground">Backend Developer</h3>
+                    <p className="text-accent font-medium">Cloud Pro AI</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground">Jan,2025 -July,2025</span>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-foreground">
+                  <li>
+                    Relational Schema Design: Architected and optimized complex relational database schemas using PostgreSQL and SQLAlchemy, ensuring data integrity for critical entities including user profiles, session histories, and system metadata.
+                  </li>
+                  <li>
+                    Database Migrations: Managed database evolution and version control using Alembic, ensuring seamless schema updates across development and production environments.
+                  </li>
+                  <li>
+                    Security Architecture: Engineered a secure authentication and authorization system from the ground up using JWT (JSON Web Tokens) and FastAPI’s OAuth2 security scopes to protect sensitive user data.
+                  </li>
+                  <li>
+                    Session Management: Developed efficient session tracking and metadata storage logic, enabling the application to maintain state across complex user journeys.
+                  </li>
+                  <li>
+                   API Performance: Improved query efficiency by implementing strategic indexing and utilizing SQLAlchemy’s asynchronous capabilities, reducing database-related bottlenecks.
                   </li>
                 </ul>
               </CardContent>
@@ -140,26 +186,6 @@ coordinating with team members to ensure successful execution.</li>
               </CardContent>
             </Card>
 
-             <Card>
-              <CardContent className="p-6">
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="text-lg font-medium text-foreground">INTERN RESEARCH ENGINEER</h3>
-                    <p className="text-accent font-medium">ORION SPACE</p>
-                  </div>
-                  <span className="text-sm text-muted-foreground">MAY 2023 – JUN 2023</span>
-                </div>
-                <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Designed and developed the PocketQube Training Kit, a modular educational platform for satellite technology,
-enhancing hands-on learning for students and enthusiasts.</li>
-                  <li> Engineered mechanical components using Catia and fabricated prototypes with 3D printing ensuring precision
-and functionality.</li>
-                  <li>
-                    Conducted testing and validation of kit components, improving design reliability
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
 
              <Card>
               <CardContent className="p-6">

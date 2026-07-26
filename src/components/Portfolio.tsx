@@ -47,9 +47,9 @@ const Portfolio = () => {
           <Card>
             <CardContent className="p-6">
               <p className="text-foreground leading-relaxed">
-                Founder and aerospace engineer. I have co-founded two companies — a software and SEO
-                agency that reached paying international clients, and an insurance comparison product
-                that raised money, missed traction and pivoted — plus{" "}
+                Founder and aerospace engineer. I co-founded{" "}
+                <span className="font-semibold">Nebulaleap Technology</span> and{" "}
+                <span className="font-semibold">Beemalaya</span>, and founded{" "}
                 <a
                   href="https://www.facebook.com/profile.php?id=100088403617028"
                   target="_blank"
@@ -58,8 +58,7 @@ const Portfolio = () => {
                 >
                   साक्षर नेपाल
                 </a>
-                , a non-profit teaching engineering in rural Nepal. I design and validate deep tech
-                systems at Airbus.
+                . I design and validate deep tech systems at Airbus.
               </p>
             </CardContent>
           </Card>
@@ -197,10 +196,10 @@ const Portfolio = () => {
                     Flight Warning System team.
                   </li>
                   <li>
-                    Built Netlistify, an ML-based tool that turns SAO sheets (logical circuit
-                    diagrams) into machine-readable netlists — PyMuPDF to pull the drawing pages out
-                    of the PDFs and a YOLOv5 model to detect the components and connections, removing
-                    the manual reading step engineers had been doing by hand.
+                    Built Netlistify, a tool that brings legacy circuit documentation onto the web.
+                    SAO sheets (logical circuit diagrams) locked inside static PDFs are parsed with
+                    PyMuPDF and read by a YOLOv5 model, then rebuilt as interactive web-based
+                    circuits engineers can navigate instead of tracing by hand.
                   </li>
                   <li>
                    Gained exposure to the testing, verification, and validation of the Flight Warning System.
@@ -284,13 +283,12 @@ coordinating with team members to ensure successful execution.</li>
                   <span className="text-sm text-muted-foreground">MAR 2022 – JAN 2023</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
-                  <li>Designed and developed robots for the ABU Robocon 2022 competition (Delhi, India), focusing on innovative
-mechanical solutions.</li>
-                  <li> Engineered the mechanical design of Robot 'A,' incorporating a dual rotational mechanism to effectively break
-piles, enhancing performance.</li>
                   <li>
-                     Conducted hands-on mechanical workshops to fabricate components, ensuring precision and functionality of
-robot parts.
+                    Designed and built robots for the ABU Robocon 2022 competition in Delhi, India.
+                  </li>
+                  <li>
+                    Owned the mechanical design of Robot 'A', including a dual rotational mechanism
+                    for breaking piles, and fabricated the parts in the workshop.
                   </li>
                 </ul>
               </CardContent>

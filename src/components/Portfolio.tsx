@@ -10,17 +10,21 @@ const Portfolio = () => {
         {/* Header */}
         <header className="mb-12">
           <h1 className="text-4xl font-semibold text-foreground mb-2">Kamal Karki</h1>
-          {/* <p className="text-xl text-muted-foreground mb-6">Hello People, I am Kamal Karki. I have experience of working in the deep tech industry and software development</p> */}
-          
+          <p className="text-xl text-muted-foreground mb-6">
+            Founder and aerospace engineer. Built and sold software as an agency to clients across
+            four continents, raised capital for a consumer insurance startup, and now design
+            next-generation aircraft at Airbus.
+          </p>
+
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>Kamaljungkarki13579@email.com</span>
+              <span>kamaljungkarki13579@gmail.com</span>
             </div>
-            {/* <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
               <span>+977 9768448066</span>
-            </div> */}
+            </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
               <span>Morang, Nepal</span>
@@ -49,24 +53,123 @@ const Portfolio = () => {
           <Card>
             <CardContent className="p-6">
               <p className="text-foreground leading-relaxed">
-                Aerospace Engineer with experience in designing, developing, and validating and verifying deep tech solutions. I have hands-on experience with software and automation development. Besides, I have also founded a social organization to teach students of remote schools in Nepal with the robotics and other applicable engineering, <a 
-    href="https://www.facebook.com/profile.php?id=100088403617028" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="text-blue-600"
-  >
-    साक्षर नेपाल
-  </a>
-                {/* And, I am also the founder of <span className="font-semibold">Nebulaleap Technology Private Limited */}
+                Founder and aerospace engineer. I co-founded and ran{" "}
+                <span className="font-semibold">Nebulaleap Technology Private Limited</span> for two
+                years, a software development and SEO company serving clients across the globe
+                including JFire Energy, Sandhi Education Academy and Securiwiser. I co-built{" "}
+                <span className="font-semibold">Beemalaya</span>, an insurance policy comparison
+                product for Nepali consumers, raised NPR 1.1M from diaspora investors, failed to find
+                traction and pivoted. I also founded{" "}
+                <a
+                  href="https://www.facebook.com/profile.php?id=100088403617028"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600"
+                >
+                  साक्षर नेपाल
+                </a>
+                , a non-profit that teaches robotics and applied engineering to students in rural
+                Nepal. Alongside company building, I design, develop, verify and validate deep tech
+                systems at Airbus, and ship production backends in Python.
               </p>
             </CardContent>
           </Card>
         </section>
 
+        {/* Founder & Company Building */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-medium text-foreground mb-6">Founder &amp; Company Building</h2>
+
+          <div className="space-y-6">
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h3 className="text-lg font-medium text-foreground">Co-founder</h3>
+                    <p className="text-accent font-medium">Nebulaleap Technology Private Limited</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground">Feb 2023 – Feb 2025</span>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-foreground">
+                  <li>
+                    Co-founded and ran a registered software development and SEO company, taking it
+                    from zero to paying international clients while still an undergraduate.
+                  </li>
+                  <li>
+                    Delivered software and SEO work for clients across the globe, including JFire
+                    Energy, Sandhi Education Academy and Securiwiser.
+                  </li>
+                  <li>
+                    Owned the full cycle end to end: sales and client acquisition, scoping and
+                    pricing, hiring and managing the delivery team, and shipping the work itself.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h3 className="text-lg font-medium text-foreground">Co-founder</h3>
+                    <p className="text-accent font-medium">Beemalaya — insurance comparison for Nepal</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground">Jun 2023 – Nov 2023</span>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-foreground">
+                  <li>
+                    Built a product that gave Nepali consumers a comprehensive, side-by-side
+                    comparison of insurance policies in a market where pricing and coverage were
+                    almost impossible to compare.
+                  </li>
+                  <li>
+                    Raised NPR 1.1M from Nepali diaspora investors to fund the build.
+                  </li>
+                  <li>
+                    Failed to reach traction with consumers, made the call to stop rather than coast,
+                    and pivoted. The lesson: distribution in an offline, agent-driven insurance
+                    market is the hard part, not the product.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-3">
+                  <div>
+                    <h3 className="text-lg font-medium text-foreground">Founder</h3>
+                    <p className="text-accent font-medium">
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100088403617028"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        साक्षर नेपाल (Sakshar Nepal) — non-profit
+                      </a>
+                    </p>
+                  </div>
+                  <span className="text-sm text-muted-foreground">Sep 2022 – Oct 2023</span>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-foreground">
+                  <li>
+                    Founded a non-profit that teaches robotics and applied engineering skills to
+                    students in rural Nepal, where those subjects are otherwise unavailable.
+                  </li>
+                  <li>
+                    Built the volunteer team, curriculum and school partnerships, and ran the
+                    workshops on the ground.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
         {/* Work Experience */}
         <section className="mb-12">
-          <h2 className="text-2xl font-medium text-foreground mb-6">Work Experience</h2>
-          
+          <h2 className="text-2xl font-medium text-foreground mb-6">Engineering Experience</h2>
+
           <div className="space-y-6">
 
              <Card>
@@ -76,11 +179,15 @@ const Portfolio = () => {
                     <h3 className="text-lg font-medium text-foreground">Associate Engineer</h3>
                     <p className="text-accent font-medium">Airbus India Private Limited</p>
                   </div>
-                  <span className="text-sm text-muted-foreground">Feb,2026 - Now</span>
+                  <span className="text-sm text-muted-foreground">Feb 2026 – Present</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
                   <li>
-                    Design and development of Airspace Cabin of Airbus Aircraft.
+                    Design and development of the Airspace Cabin for the next generation A320.
+                  </li>
+                  <li>
+                    Lead a subteam of 2 engineers running feasibility studies, design and drawings
+                    end to end to resolve manufacturing issues.
                   </li>
                 </ul>
               </CardContent>
@@ -93,11 +200,16 @@ const Portfolio = () => {
                     <h3 className="text-lg font-medium text-foreground">INTERN (FLIGHT WARNING SYSTEM)</h3>
                     <p className="text-accent font-medium">Airbus India Private Limited</p>
                   </div>
-                  <span className="text-sm text-muted-foreground">July 30 - Now</span>
+                  <span className="text-sm text-muted-foreground">Aug 2025 – Jan 2026</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
                   <li>
-                    Developed an internal automation tool, VERITY, to accelerate the creation of testing procedure documentation.
+                    Built and shipped VERITY, an internal automation tool that accelerates the
+                    creation of testing procedure documentation, now used by the team.
+                  </li>
+                  <li>
+                    Analyzed system failures in Single Aisle and long-range aircraft as part of the
+                    Flight Warning System team.
                   </li>
                   <li>
                     Developing an ML-based tool to improve efficiency when working with SAO sheets (Logical Circuit diagrams).
@@ -125,9 +237,13 @@ const Portfolio = () => {
                     <h3 className="text-lg font-medium text-foreground">Backend Developer</h3>
                     <p className="text-accent font-medium">Cloud Pro AI</p>
                   </div>
-                  <span className="text-sm text-muted-foreground">Jan,2025 -July,2025</span>
+                  <span className="text-sm text-muted-foreground">Feb 2025 – Jul 2025</span>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
+                  <li>
+                    Designed and developed the entire backend system from scratch as the sole backend
+                    engineer, from schema to authentication to deployment.
+                  </li>
                   <li>
                     Relational Schema Design: Architected and optimized complex relational database schemas using PostgreSQL and SQLAlchemy, ensuring data integrity for critical entities including user profiles, session histories, and system metadata.
                   </li>
@@ -274,23 +390,6 @@ robot parts.
       </CardContent>
     </Card>
 
-    <Card>
-      <CardContent className="p-6">
-        <h3 className="text-lg font-medium text-foreground mb-2">
-          Design and Flight Testing of a Blended Wing Body (BWB) Aircraft
-        </h3>
-        <p className="text-muted-foreground mb-4">
-          Designed the BWB aircraft model in CATIA V5 and manufactured the body using foam. Integrated essential electronics
-          including BLDC motors, RC receiver, servo motors, Li-Po battery, and ESC for power and control systems. Successfully
-          test-flew the prototype.
-        </p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Basic CAD Design</span>
-          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Basic Electronics</span>
-        </div>
-      </CardContent>
-    </Card>
-
   </div>
 </section>
 
@@ -304,15 +403,18 @@ robot parts.
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
                     <h3 className="text-lg font-medium text-foreground mb-2">
-                      ARP4754(A) & ARP4761(A)
+                      How Dream Evolves
                     </h3>
                     <p className="text-muted-foreground mb-3">
-                      ARP4754 is guidelines for Development of Civil Aircraft and Systems that deal with the development processes which support certification of Aircraft systems addressing from the complete aircraft development cycle, from system requirements through systems verification.
+                      A personal essay on how my ambition moved from wanting to be a Nobel-winning
+                      researcher to wanting to build a billion-dollar company — the two sides of
+                      myself I hold together, what the failed insurance and software ventures taught
+                      me, and why I keep betting on the dream anyway.
                     </p>
-                    <span className="text-sm text-muted-foreground">Published on Medium • May 2025</span>
+                    <span className="text-sm text-muted-foreground">Published on Medium • May 2026</span>
                   </div>
                   <Button variant="outline" size="sm" asChild>
-                    <a href="https://medium.com/@kamaljungkarki13579/arp4754-arp4761-a-e28a7c1f45e8" target="_blank" rel="noopener noreferrer">
+                    <a href="https://medium.com/@kamaljungkarki13579/how-dream-evolves-073ebe41f47c" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Read Article
                     </a>
@@ -321,33 +423,6 @@ robot parts.
               </CardContent>
             </Card>
 
-
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex justify-between items-start">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-medium text-foreground mb-2">
-                      A beginner guide to the Pytest:
-                    </h3>
-                    <p className="text-muted-foreground mb-3">
-                      Topics covered:
-Python setup,
-Virtual Environment setup,
-pytest setup,
-File setup,
-Working with some basic syntax
-                    </p>
-                    <span className="text-sm text-muted-foreground">Published on Medium • Apr 2025</span>
-                  </div>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href="https://medium.com/@kamaljungkarki13579/a-beginner-guide-to-the-pytest-35149b4c07bc" target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Read Article
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </section>
 

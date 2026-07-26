@@ -10,13 +10,7 @@ const Portfolio = () => {
         {/* Header */}
         <header className="mb-12">
           <h1 className="text-4xl font-semibold text-foreground mb-2">Kamal Karki</h1>
-          <p className="text-xl text-muted-foreground mb-6">
-            Founder and aerospace engineer. Built and sold software as an agency to clients across
-            four continents, raised capital for a consumer insurance startup, and now design
-            next-generation aircraft at Airbus.
-          </p>
-
-          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-6">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
               <span>kamaljungkarki13579@gmail.com</span>
@@ -53,13 +47,9 @@ const Portfolio = () => {
           <Card>
             <CardContent className="p-6">
               <p className="text-foreground leading-relaxed">
-                Founder and aerospace engineer. I co-founded and ran{" "}
-                <span className="font-semibold">Nebulaleap Technology Private Limited</span> for two
-                years, a software development and SEO company serving clients across the globe
-                including JFire Energy, Sandhi Education Academy and Securiwiser. I co-built{" "}
-                <span className="font-semibold">Beemalaya</span>, an insurance policy comparison
-                product for Nepali consumers, raised NPR 1.1M from diaspora investors, failed to find
-                traction and pivoted. I also founded{" "}
+                Founder and aerospace engineer. I have co-founded two companies — a software and SEO
+                agency that reached paying international clients, and an insurance comparison product
+                that raised money, missed traction and pivoted — plus{" "}
                 <a
                   href="https://www.facebook.com/profile.php?id=100088403617028"
                   target="_blank"
@@ -68,9 +58,8 @@ const Portfolio = () => {
                 >
                   साक्षर नेपाल
                 </a>
-                , a non-profit that teaches robotics and applied engineering to students in rural
-                Nepal. Alongside company building, I design, develop, verify and validate deep tech
-                systems at Airbus, and ship production backends in Python.
+                , a non-profit teaching engineering in rural Nepal. I design and validate deep tech
+                systems at Airbus.
               </p>
             </CardContent>
           </Card>
@@ -204,24 +193,14 @@ const Portfolio = () => {
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
                   <li>
-                    Built and shipped VERITY, an internal automation tool that accelerates the
-                    creation of testing procedure documentation, now used by the team.
-                  </li>
-                  <li>
                     Analyzed system failures in Single Aisle and long-range aircraft as part of the
                     Flight Warning System team.
                   </li>
                   <li>
-                    Developing an ML-based tool to improve efficiency when working with SAO sheets (Logical Circuit diagrams).
-                  </li>
-                  <li>
-                    Performed Test Fault Analysis using TSAS.
-                  </li>
-                  <li>
-                  Prepared Test Requirements, developed Test Procedures, and performed analysis for aircraft certification and
-                  safety.</li>
-                  <li>
-                    Gained knowledge of LRU (Line Replaceable Units) and IMA (Integrated Modular Avionics)
+                    Built Netlistify, an ML-based tool that turns SAO sheets (logical circuit
+                    diagrams) into machine-readable netlists — PyMuPDF to pull the drawing pages out
+                    of the PDFs and a YOLOv5 model to detect the components and connections, removing
+                    the manual reading step engineers had been doing by hand.
                   </li>
                   <li>
                    Gained exposure to the testing, verification, and validation of the Flight Warning System.
@@ -241,23 +220,15 @@ const Portfolio = () => {
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
                   <li>
-                    Designed and developed the entire backend system from scratch as the sole backend
-                    engineer, from schema to authentication to deployment.
+                    Built the backend from scratch in FastAPI and PostgreSQL — schema, auth, session
+                    handling and deployment.
                   </li>
                   <li>
-                    Relational Schema Design: Architected and optimized complex relational database schemas using PostgreSQL and SQLAlchemy, ensuring data integrity for critical entities including user profiles, session histories, and system metadata.
+                    Wrote the auth layer with JWT and OAuth2 scopes, and handled schema migrations
+                    with Alembic.
                   </li>
                   <li>
-                    Database Migrations: Managed database evolution and version control using Alembic, ensuring seamless schema updates across development and production environments.
-                  </li>
-                  <li>
-                    Security Architecture: Engineered a secure authentication and authorization system from the ground up using JWT (JSON Web Tokens) and FastAPI’s OAuth2 security scopes to protect sensitive user data.
-                  </li>
-                  <li>
-                    Session Management: Developed efficient session tracking and metadata storage logic, enabling the application to maintain state across complex user journeys.
-                  </li>
-                  <li>
-                   API Performance: Improved query efficiency by implementing strategic indexing and utilizing SQLAlchemy’s asynchronous capabilities, reducing database-related bottlenecks.
+                    Cut query latency with indexing and async SQLAlchemy.
                   </li>
                 </ul>
               </CardContent>
@@ -346,9 +317,13 @@ robot parts.
           printing temperature around 220°C, ~80% printing density, and a rectilinear pattern provide the most effective
           tensile strength. We also found that 90% infill gives the highest compressive strength (20.93 MPa), making it ideal
           for high load-bearing applications. Impact test results showed honeycomb infill absorbing the highest energy,
-          followed by gyroid and rectilinear patterns.
+          followed by gyroid and rectilinear patterns. On top of the experimental data, I built and
+          trained a machine learning model that predicts the mechanical properties of a print from
+          its parameters, so the strength of a configuration can be estimated without running the
+          physical test.
         </p>
         <div className="flex flex-wrap gap-2 mb-4">
+          <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Machine Learning</span>
           <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Pandas</span>
           <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Materials Science</span>
           <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">3D Printing</span>

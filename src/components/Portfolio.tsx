@@ -48,8 +48,9 @@ const Portfolio = () => {
             <CardContent className="p-6">
               <p className="text-foreground leading-relaxed">
                 Founder and aerospace engineer. I co-founded{" "}
-                <span className="font-semibold">Nebulaleap Technology</span> and{" "}
-                <span className="font-semibold">Beemalaya</span>, and founded{" "}
+                <span className="font-semibold">Nebulaleap Technology</span>, a software and SEO
+                agency, and <span className="font-semibold">Beemalaya</span>, an insurance
+                comparison product that raised money, missed traction and pivoted. I also founded{" "}
                 <a
                   href="https://www.facebook.com/profile.php?id=100088403617028"
                   target="_blank"
@@ -196,8 +197,8 @@ const Portfolio = () => {
                     Flight Warning System team.
                   </li>
                   <li>
-                    Built Netlistify, a tool that brings legacy circuit documentation onto the web.
-                    SAO sheets (logical circuit diagrams) locked inside static PDFs are parsed with
+                    Building a tool that brings legacy circuit documentation onto the web. SAO
+                    sheets (logical circuit diagrams) locked inside static PDFs are parsed with
                     PyMuPDF and read by a YOLOv5 model, then rebuilt as interactive web-based
                     circuits engineers can navigate instead of tracing by hand.
                   </li>
@@ -234,7 +235,7 @@ const Portfolio = () => {
             </Card>
 
 
-            <Card>
+            {/* <Card>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
@@ -252,7 +253,7 @@ brake wear for operational reliability.</li>
 adverse conditions. </li>
                 </ul>
               </CardContent>
-            </Card>
+            </Card> */}
 
 
              <Card>
@@ -284,7 +285,8 @@ coordinating with team members to ensure successful execution.</li>
                 </div>
                 <ul className="list-disc list-inside space-y-2 text-foreground">
                   <li>
-                    Designed and built robots for the ABU Robocon 2022 competition in Delhi, India.
+                    Designed and built robots for the ABU Robocon 2022 competition in Delhi, India —
+                    won Runner-up and Best Design Award.
                   </li>
                   <li>
                     Owned the mechanical design of Robot 'A', including a dual rotational mechanism

@@ -20,7 +20,7 @@ export type Entry = {
 export const contact = {
   name: "Kamal Karki",
   location: "Morang, Nepal",
-  phone: "+977 9768448066",
+  phone: "+977 9804023531",
   email: "077bas016.kamal@pcampus.edu.np",
   linkedin: "https://www.linkedin.com/in/kamal-karki-16a926213",
   github: "https://github.com/karkikamal098",

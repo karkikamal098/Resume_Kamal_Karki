@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Gallery from "./pages/Gallery";
+import { GallerySlug, galleries } from "./data/resume";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -17,8 +18,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/robotics" element={<Gallery slug="robotics" />} />
-          <Route path="/maps" element={<Gallery slug="maps" />} />
+          {(Object.keys(galleries) as GallerySlug[]).map((slug) => (
+            <Route key={slug} path={`/${slug}`} element={<Gallery slug={slug} />} />
+          ))}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

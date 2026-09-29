@@ -17,20 +17,21 @@ export const Rich = ({ text }: { text: string }) => (
 );
 
 export const Section = ({ id, title, children }: { id: string; title: string; children: ReactNode }) => (
-  <section id={id} className="mb-12 scroll-mt-6">
-    <h2 className="text-2xl font-medium text-foreground mb-6">{title}</h2>
+  <section id={id} className="mb-8">
+    <h2 className="text-xl sm:text-2xl font-medium text-foreground mb-3">{title}</h2>
     {children}
   </section>
 );
 
 export const GalleryStrip = ({ slug }: { slug: GallerySlug }) => (
-  <Link to={`/${slug}`} className="grid grid-cols-3 gap-2 mt-4 group" aria-label={`Open ${galleries[slug].title} photos`}>
+  <Link to={`/${slug}`} className="grid grid-cols-3 gap-2 mt-3 group" aria-label={`Open ${galleries[slug].title} photos`}>
     {galleries[slug].photos.slice(0, 3).map((p) => (
       <img
         key={p.src}
         src={p.src}
         alt={p.alt}
         loading="lazy"
+        style={p.position ? { objectPosition: p.position } : undefined}
         className="aspect-[3/2] w-full object-cover rounded-md border border-border group-hover:opacity-90 transition-opacity"
       />
     ))}
@@ -39,8 +40,8 @@ export const GalleryStrip = ({ slug }: { slug: GallerySlug }) => (
 
 export const EntryCard = ({ entry }: { entry: Entry }) => (
   <Card>
-    <CardContent className="p-6">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-3">
+    <CardContent className="p-4 sm:p-5">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-2">
         <div>
           <h3 className="text-lg font-medium text-foreground">{entry.title}</h3>
           {entry.org && (
@@ -61,7 +62,7 @@ export const EntryCard = ({ entry }: { entry: Entry }) => (
         </div>
       </div>
 
-      <ul className="list-disc pl-5 space-y-2 text-foreground">
+      <ul className="list-disc pl-5 space-y-1.5 text-foreground">
         {entry.bullets.map((b, i) => (
           <li key={i}>
             <Rich text={b} />
@@ -70,7 +71,7 @@ export const EntryCard = ({ entry }: { entry: Entry }) => (
       </ul>
 
       {entry.tags && (
-        <div className="flex flex-wrap gap-2 mt-4">
+        <div className="flex flex-wrap gap-2 mt-3">
           {entry.tags.map((t) => (
             <span key={t} className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">
               {t}
@@ -82,7 +83,7 @@ export const EntryCard = ({ entry }: { entry: Entry }) => (
       {entry.gallery && <GalleryStrip slug={entry.gallery} />}
 
       {entry.links && (
-        <div className="flex flex-wrap gap-2 mt-4">
+        <div className="flex flex-wrap gap-2 mt-3">
           {entry.links.map((l) => (
             <Button key={l.href} variant="outline" size="sm" asChild>
               {l.internal ? (

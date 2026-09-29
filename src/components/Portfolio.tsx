@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,16 +16,8 @@ import {
   training,
 } from "@/data/resume";
 
-const nav = [
-  { label: "Experience", href: "#experience" },
-  { label: "Open Source", href: "#open-source" },
-  { label: "Projects", href: "#projects" },
-  { label: "Leadership", href: "#leadership" },
-  { label: "Skills", href: "#skills" },
-];
-
 const EntryList = ({ entries }: { entries: typeof experience }) => (
-  <div className="space-y-6">
+  <div className="space-y-3">
     {entries.map((e) => (
       <EntryCard key={e.org + e.title} entry={e} />
     ))}
@@ -36,12 +27,12 @@ const EntryList = ({ entries }: { entries: typeof experience }) => (
 const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
         {/* Header */}
-        <header className="mb-12">
+        <header className="mb-8">
           <h1 className="text-4xl font-semibold text-foreground mb-2">{contact.name}</h1>
           <p className="text-lg text-muted-foreground">Aerospace Engineer · Airbus</p>
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground mt-6">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground mt-4">
             <a href={`mailto:${contact.email}`} className="flex items-center gap-2 hover:text-foreground">
               <Mail className="w-4 h-4" />
               <span className="break-all">{contact.email}</span>
@@ -56,7 +47,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 mt-4">
+          <div className="flex flex-wrap gap-3 mt-3">
             <Button variant="outline" size="sm" asChild>
               <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-4 h-4 mr-2" />
@@ -72,25 +63,11 @@ const Portfolio = () => {
             </Button>
             */}
           </div>
-
-          <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm mt-8 pt-4 border-t border-border">
-            {nav.map((n) => (
-              <a key={n.href} href={n.href} className="text-muted-foreground hover:text-foreground">
-                {n.label}
-              </a>
-            ))}
-            <Link to="/robotics" className="text-accent hover:underline">
-              Robotics
-            </Link>
-            <Link to="/maps" className="text-accent hover:underline">
-              MAPS
-            </Link>
-          </nav>
         </header>
 
         <Section id="profile" title="Profile">
           <Card>
-            <CardContent className="p-6">
+            <CardContent className="p-4 sm:p-5">
               <p className="text-foreground leading-relaxed">
                 <Rich text={profile} />
               </p>
@@ -124,7 +101,7 @@ const Portfolio = () => {
 
         <Section id="skills" title="Technical Skills">
           <Card>
-            <CardContent className="p-6 space-y-4">
+            <CardContent className="p-4 sm:p-5 space-y-3">
               {skills.map((s) => (
                 <div key={s.group}>
                   <h3 className="text-sm font-medium text-foreground mb-2">{s.group}</h3>
@@ -143,8 +120,8 @@ const Portfolio = () => {
 
         <Section id="training" title="Selected Training & Achievements">
           <Card>
-            <CardContent className="p-6">
-              <ul className="space-y-3">
+            <CardContent className="p-4 sm:p-5">
+              <ul className="space-y-2">
                 {training.map((t) => (
                   <li key={t.title} className="flex flex-col sm:flex-row sm:justify-between gap-1">
                     <span className="text-foreground">
@@ -163,7 +140,7 @@ const Portfolio = () => {
           <div className="space-y-4">
             {articles.map((a) => (
               <Card key={a.href}>
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-5">
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
                     <div className="flex-1">
                       <h3 className="text-lg font-medium text-foreground mb-2">{a.title}</h3>
@@ -184,7 +161,7 @@ const Portfolio = () => {
         </Section>
         */}
 
-        <Separator className="my-8" />
+        <Separator className="my-6" />
 
         <footer className="text-center text-muted-foreground">
           <p>© {new Date().getFullYear()} Kamal Karki. All rights reserved.</p>

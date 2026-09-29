@@ -2,7 +2,7 @@
 
 export type Link = { label: string; href: string; internal?: boolean };
 
-export type GallerySlug = "robotics" | "maps";
+export type GallerySlug = "robotics" | "maps" | "saakshar-nepal";
 
 export type Entry = {
   title: string;
@@ -209,6 +209,8 @@ export const entrepreneurship: Entry[] = [
   // },
 ];
 
+const saaksharFacebook = "https://www.facebook.com/people/%E0%A4%B8%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%B0-%E0%A4%A8%E0%A5%87%E0%A4%AA%E0%A4%BE%E0%A4%B2/100088403617028/";
+
 export const leadership: Entry[] = [
   {
     title: "Vice President (Dec 2023 – Dec 2024) · Treasurer (Jul 2022 – Dec 2023)",
@@ -225,7 +227,7 @@ export const leadership: Entry[] = [
   {
     title: "Founding President",
     org: "Saakshar Nepal",
-    orgHref: "https://www.facebook.com/profile.php?id=100088403617028",
+    orgHref: "https://www.facebook.com/people/%E0%A4%B8%E0%A4%BE%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%B0-%E0%A4%A8%E0%A5%87%E0%A4%AA%E0%A4%BE%E0%A4%B2/100088403617028/",
     period: "Mar 2023 – Mar 2024",
     location: "Lalitpur, Nepal",
     bullets: [
@@ -233,6 +235,11 @@ export const leadership: Entry[] = [
       "Developed and led **hands-on robotics workshops** introducing fundamental engineering concepts, improving STEM accessibility for students below Class 8.",
       "Coordinated outreach to orphanages, providing books and stationery to children to promote **educational equity**.",
     ],
+    links: [
+      { label: "Saakshar Nepal photos", href: "/saakshar-nepal", internal: true },
+      { label: "Facebook page", href: saaksharFacebook },
+    ],
+    gallery: "saakshar-nepal",
   },
   {
     title: "Robotics Engineer",
@@ -288,7 +295,15 @@ export const training: { title: string; detail: string; date?: string }[] = [
 //   },
 // ];
 
-export type Photo = { src: string; alt: string; caption: string };
+export type Photo = {
+  src: string;
+  alt: string;
+  caption: string;
+  /** Span the full grid width at the photo's own aspect ratio (the first photo always does). */
+  wide?: boolean;
+  /** CSS object-position for the 3:2 crop, e.g. "center 30%" to keep a face in a portrait shot. */
+  position?: string;
+};
 
 export type Gallery = {
   title: string;
@@ -298,8 +313,8 @@ export type Gallery = {
   photos: Photo[];
 };
 
-// Photo pages at /robotics and /maps. Photos live in public/images/<slug>. Edit captions here.
-// A new slug also needs a route in App.tsx and an entry in scripts/spa-fallback.mjs.
+// Photo pages at /<slug>. Photos live in public/images/<slug>. Edit captions here.
+// A new slug also needs adding to GallerySlug above and to scripts/spa-fallback.mjs.
 export const galleries: Record<GallerySlug, Gallery> = {
   robotics: {
     title: "Robotics",
@@ -360,6 +375,70 @@ export const galleries: Record<GallerySlug, Gallery> = {
         src: "/images/maps/integration-bee-group.jpg",
         alt: "Group photo of Integration Bee 2023 participants and organizers",
         caption: "Participants and organizers of Integration Bee 2023, Pulchowk Campus.",
+      },
+    ],
+  },
+  "saakshar-nepal": {
+    title: "Saakshar Nepal",
+    subtitle: "Founding President · Mar 2023 – Mar 2024 · Lalitpur, Nepal",
+    highlights: [
+      "Founded Saakshar Nepal, a social organization delivering robotics and engineering education to **2,000+ students across 15+ schools in six districts**.",
+      "Developed and led **hands-on robotics workshops** introducing fundamental engineering concepts, improving STEM accessibility for students below Class 8.",
+      "Coordinated outreach to orphanages, providing books and stationery to children to promote **educational equity**.",
+    ],
+    links: [{ label: "Facebook page", href: saaksharFacebook }],
+    photos: [
+      {
+        src: "/images/saakshar-nepal/robot-car-demo.jpg",
+        alt: "Volunteer crouching in a classroom aisle to demonstrate a small robot car, with a 'How does a vehicle move?' slide on the screen",
+        caption: "Demonstrating a robot car in a “How does a vehicle move?” session.",
+      },
+      {
+        src: "/images/saakshar-nepal/robot-car-explained.jpg",
+        alt: "Volunteer holding a robot car and explaining it to a class, with other volunteers standing by the whiteboard",
+        caption: "Explaining how a robot car works, with the volunteer team.",
+      },
+      {
+        src: "/images/saakshar-nepal/robot-car-to-class.jpg",
+        alt: "Volunteer holding up a robot car in front of a full class of students",
+        caption: "Showing a robot car to a class.",
+      },
+      {
+        src: "/images/saakshar-nepal/balloon-car.jpg",
+        alt: "Student holding a balloon-powered car made from a carton, straws and bottle caps",
+        caption: "A student with the balloon-powered car made in a hands-on activity.",
+      },
+      {
+        src: "/images/saakshar-nepal/robot-brain-session.jpg",
+        alt: "Volunteer presenting to a class with a slide titled रोबोटको बुद्धि (the robot's brain)",
+        caption: "A session on the robot’s “brain” (रोबोटको बुद्धि).",
+      },
+      {
+        src: "/images/saakshar-nepal/volunteers-in-class.jpg",
+        alt: "Volunteers laughing with students in a classroom during a workshop",
+        caption: "Volunteers and students during a workshop.",
+      },
+      {
+        src: "/images/saakshar-nepal/packed-classroom.jpg",
+        alt: "A packed classroom of students watching a workshop",
+        caption: "A packed classroom during a workshop.",
+      },
+      {
+        src: "/images/saakshar-nepal/robot-car-closeup.jpg",
+        alt: "Volunteer explaining the wiring and microcontroller on a robot car",
+        caption: "Walking through the robot car’s microcontroller and wiring.",
+        position: "center 30%",
+      },
+      {
+        src: "/images/saakshar-nepal/session-with-children.jpg",
+        alt: "Volunteers with a laptop leading a session for a group of young children",
+        caption: "Volunteers leading a session with younger children.",
+      },
+      {
+        src: "/images/saakshar-nepal/classroom-group.jpg",
+        alt: "Volunteer seated with a group of primary-school students in blue uniforms in front of a chalkboard",
+        caption: "With primary-school students after a class session.",
+        wide: true,
       },
     ],
   },

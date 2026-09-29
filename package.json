@@ -6,7 +6,7 @@
   "homepage": "https://karkikamal098.github.io/Resume_Kamal_Karki",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/spa-fallback.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",

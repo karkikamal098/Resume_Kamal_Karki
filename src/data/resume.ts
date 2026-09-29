@@ -37,7 +37,7 @@ export const education: Entry[] = [
     location: "Lalitpur, Nepal",
     bullets: [
       "**Overall:** 74.5% · **Final semester:** 84% · **National Engineering Entrance Rank:** 419 / 18,000+ (top 2.3%)",
-      "**Relevant coursework:** Control Systems, Engineering Dynamics, Theory of Machine, Numerical Methods, Finite Element Method, Continuum Mechanics, Instrumentation & Sensors, Fault Monitoring & Diagnosis, Unmanned Air Vehicle Synthesis, Computer Aided Design & Manufacturing",
+      "**Relevant coursework:** Control Systems, Engineering Dynamics, Theory of Machines, Numerical Methods, Finite Element Method, Continuum Mechanics, Instrumentation & Sensors, Fault Monitoring & Diagnosis, Unmanned Air Vehicle Synthesis, Computer Aided Design & Manufacturing",
     ],
   },
   {
@@ -58,7 +58,7 @@ export const experience: Entry[] = [
     period: "Feb 2026 – Present",
     location: "India",
     bullets: [
-      "Contributing to the **design and development of the Airspace cabin** for the next-generation **A320** family, including research on **improving the attachment of shell partitions**.",
+      "Contributing to the **design and development of the Airbus Airspace cabin** for the next-generation **A320** family, including research on **improving the attachment of shell partitions**.",
       "Leading a **sub-team of two engineers** through feasibility studies, design, and drawings end-to-end to resolve manufacturing issues.",
       "Developed an **ML-based design-reuse system for aircraft customization**, using unsupervised **DBSCAN clustering** and priority-based ranking to retrieve and reuse prior designs, with an estimated saving of **3,500+ engineering hours annually**.",
     ],
@@ -134,13 +134,13 @@ export const openSource: Entry[] = [
 export const projects: Entry[] = [
   {
     title:
-      "Investigation of the Effects of Printing Parameters and Reinforcement on the Mechanical Properties of 3D-Printed PLA+ Composites",
+      "Investigation of the effects of Printing Parameters and Reinforcement on the Mechanical Properties of 3D-Printed PLA+ Composites",
     period: "Jun 2024 – Feb 2025",
     tags: ["FDM", "Materials Testing", "Machine Learning"],
     bullets: [
-      "Tested how nozzle temperature, infill pattern and infill density affect 3D-printed PLA+ (**ASTM D638** tensile, compression and damping tests), and showed by rule-of-mixtures analysis that embedded **steel-wire reinforcement** transferred no load (η ≈ 0).",
+      "Tested how nozzle temperature, infill pattern and infill density affect 3D-printed PLA+ (**ASTM D638** tensile, compression and damping tests); rule-of-mixtures analysis indicated **negligible load transfer** from embedded steel-wire reinforcement (η ≈ 0 for two- and three-wire configurations).",
       "Built an **ML pipeline** pooling **9 open FDM datasets (172 specimens)** and benchmarked **20 regressors** under nested cross-validation; an **ARD Gaussian process** predicted tensile strength to **RMSE 6.2 MPa (R² 0.90)**.",
-      "Model interpretation (SHAP, partial dependence) showed **infill density** has the largest effect on strength; cross-laboratory tests showed that published data predict **trends** for a new printer but not its **absolute strength**, which needs a few calibration specimens.",
+      "Model interpretation (SHAP, partial dependence) identified **infill density** as the dominant process effect; cross-laboratory validation showed published datasets captured **strength trends** but required calibration specimens for absolute predictions.",
     ],
   },
   {
@@ -218,8 +218,8 @@ export const leadership: Entry[] = [
     period: "Jul 2022 – Dec 2024",
     location: "Lalitpur, Nepal",
     bullets: [
-      "Led strategic planning for society initiatives and organized the national-level **Math and Physics Olympiad and Integration Bee** with **400+ participants**.",
-      "Raised **NPR 900K in sponsorship** from startups, companies, and organizations to fund the national-level Olympiad.",
+      "Led strategic planning for society initiatives and organized the **Math and Physics Olympiad and Integration Bee**, attracting **400+ participants from across Nepal**.",
+      "Raised **NPR 900K in sponsorship** from startups, companies, and organizations to fund the Olympiad.",
     ],
     links: [{ label: "MAPS photos", href: "/maps", internal: true }],
     gallery: "maps",
@@ -274,7 +274,7 @@ export const skills: { group: string; items: string[] }[] = [
   },
   {
     group: "Mechanical Design & Simulation",
-    items: ["CATIA V5", "ANSYS", "3D Printing (FDM)", "Prototype Development", "Mechanical Fabrication"],
+    items: ["CATIA V5", "ANSYS", "3D Printing (FDM)", "Prototype Development"],
   },
 ];
 
@@ -355,8 +355,8 @@ export const galleries: Record<GallerySlug, Gallery> = {
     title: "Maths and Physics Society (MAPS)",
     subtitle: "Pulchowk Campus · Vice President (Dec 2023 – Dec 2024) · Treasurer (Jul 2022 – Dec 2023)",
     highlights: [
-      "Led strategic planning for society initiatives and organized the national-level **Math and Physics Olympiad and Integration Bee** with **400+ participants**.",
-      "Raised **NPR 900K in sponsorship** from startups, companies, and organizations to fund the national-level Olympiad.",
+      "Led strategic planning for society initiatives and organized the **Math and Physics Olympiad and Integration Bee**, attracting **400+ participants from across Nepal**.",
+      "Raised **NPR 900K in sponsorship** from startups, companies, and organizations to fund the Olympiad.",
     ],
     photos: [
       {

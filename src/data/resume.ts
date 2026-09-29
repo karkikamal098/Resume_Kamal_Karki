@@ -27,7 +27,7 @@ export const contact = {
 };
 
 export const profile =
-  "Aerospace engineer at **Airbus** working on **A320 cabin design**, with experience in **engineering automation, machine learning, robotics, scientific computing, and data-driven materials research**. Built ML-assisted engineering tools that improved analysis efficiency by **23%** and are estimated to save **3,500+ engineering hours annually**. Open-source contributor to the **Robotics Toolbox for Python** and **PyBaMM**.";
+  "Aerospace engineer at **Airbus** working on **A320 cabin design**, with experience in **engineering automation, machine learning, and robotics**. Built ML-assisted tools for aircraft-system analysis and design reuse that improved analysis efficiency by **23%** and are estimated to save **3,500+ engineering hours annually**. Open-source contributor to the **Robotics Toolbox for Python** (robot kinematics, dynamics and simulation) and **PyBaMM** (physics-based battery modelling).";
 
 export const education: Entry[] = [
   {

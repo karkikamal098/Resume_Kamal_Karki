@@ -149,7 +149,7 @@ export const projects: Entry[] = [
     tags: ["Plane-Maker", "X-Plane"],
     bullets: [
       "Co-designed a **30-passenger twin-turbofan charter aircraft** (MTOW 21,000 kg, 5,000 km range), covering sizing, weight estimation, wing/tail and landing-gear design, and simulated flight performance.",
-      "Evaluated longitudinal and lateral-directional **stability modes** and handling qualities, achieving a **Cooper–Harper rating of 3**; presented at the **IOE Paper Presentation**, Pulchowk Campus.",
+      "Evaluated longitudinal and lateral-directional **stability modes** and handling qualities, achieving a **Cooper–Harper rating of 3**; presented at the **Departmental Poster Presentation**, Pulchowk Campus.",
     ],
   },
   {
@@ -317,14 +317,12 @@ export type Gallery = {
 // A new slug also needs adding to GallerySlug above and to scripts/spa-fallback.mjs.
 export const galleries: Record<GallerySlug, Gallery> = {
   robotics: {
-    title: "Robotics",
-    subtitle: "Robotics Club, Pulchowk Campus · Mar 2022 – Jan 2023",
+    title: "Robotics Club, Pulchowk Campus",
+    subtitle: "Robotics Engineer · Mar 2022 – Jan 2023 · Lalitpur, Nepal",
     highlights: [
-      "**ABU Robocon 2022, New Delhi** – member of the Pulchowk Campus team; designed Robot A's mechanical system, including a **dual-rotational mechanism**. The team finished **3rd overall** and received the **Nagase Award**.",
-      "**Saakshar Nepal** – founded a social organization that ran **hands-on robotics workshops** for **2,000+ students across 15+ schools** in six districts.",
-      "**Robotics Toolbox for Python** – open-source fixes to URDF rigid-body dynamics, the Gauss–Newton IK solver and robot-model loading, reviewed and merged by the author.",
+      "Contributed to the university's **ABU Robocon 2022** team, designing Robot A's mechanical system, including a **dual-rotational mechanism**.",
+      "Team secured **3rd place overall** and received the **Nagase Award** at ABU Robocon 2022 in New Delhi, India.",
     ],
-    links: [{ label: "Robotics Toolbox for Python", href: "https://github.com/petercorke/robotics-toolbox-python" }],
     photos: [
       {
         src: "/images/robotics/team-with-robots.jpg",

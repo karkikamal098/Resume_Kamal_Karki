@@ -325,6 +325,16 @@ export const galleries: Record<GallerySlug, Gallery> = {
     ],
     photos: [
       {
+        src: "/images/robotics/robocon-2022-robot.jpg",
+        alt: "Team members setting up a pneumatic ball-handling robot loaded with red balls for a test run",
+        caption: "The ABU Robocon 2022 robot I worked on, being set up by the team for a test run.",
+      },
+      {
+        src: "/images/robotics/team-with-faculty.jpg",
+        alt: "Robotics Club team on stage with faculty members and the competition robots",
+        caption: "The Robotics Club team with faculty members and the robots, Pulchowk Campus.",
+      },
+      {
         src: "/images/robotics/team-with-robots.jpg",
         alt: "Robotics Club team posing on the practice field with two competition robots and rings",
         caption: "The Robotics Club team with two of our competition robots on the practice field, Pulchowk Campus.",

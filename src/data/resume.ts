@@ -36,7 +36,7 @@ export const education: Entry[] = [
     period: "May 2021 – Apr 2025",
     location: "Lalitpur, Nepal",
     bullets: [
-      "**Overall:** 74.5% · **Final semester:** 84% · **National Engineering Entrance Rank:** 419 / 18,000+ (top 2.3%)",
+      "**Overall:** 74.16% · **Final semester:** 84% · **National Engineering Entrance Rank:** 419 / 18,000+ (top 2.3%)",
       "**Relevant coursework:** Control Systems, Engineering Dynamics, Theory of Machines, Numerical Methods, Finite Element Method, Continuum Mechanics, Instrumentation & Sensors, Fault Monitoring & Diagnosis, Unmanned Air Vehicle Synthesis, Computer Aided Design & Manufacturing",
     ],
   },

@@ -17,8 +17,8 @@ export const Rich = ({ text }: { text: string }) => (
 );
 
 export const Section = ({ id, title, children }: { id: string; title: string; children: ReactNode }) => (
-  <section id={id} className="mb-8">
-    <h2 className="text-xl sm:text-2xl font-medium text-foreground mb-3">{title}</h2>
+  <section id={id} className="mb-5">
+    <h2 className="text-xl sm:text-2xl font-medium text-foreground mb-2.5">{title}</h2>
     {children}
   </section>
 );

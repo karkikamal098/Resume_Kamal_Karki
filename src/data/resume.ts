@@ -253,25 +253,53 @@ export const leadership: Entry[] = [
   },
 ];
 
-export const technicalSkills = [
-  "Robot Kinematics & Dynamics",
-  "Mechanism Design",
-  "PID-Based Speed Control",
-  "URDF / xacro Parsing",
-  "CATIA V5",
-  "VPM / ENOVIA PLM (PASS, TREND)",
-  "Assembly Interference & Clearance Analysis",
-  "Raspberry Pi / PCB Development",
-  "Python • MATLAB • Git • pytest",
-  "FastAPI • PostgreSQL • Alembic",
-  "scikit-learn • Gaussian Processes • DBSCAN",
-  "YOLOv5 • SHAP • Nested Cross-Validation • pandas",
-  "LaTeX",
+export const skills = [
+  {
+    group: "Robotics & Control",
+    items: [
+      "Robot Kinematics & Dynamics",
+      "Mechanism Design",
+      "PID-Based Speed Control",
+      "URDF / xacro Parsing",
+    ],
+  },
+  {
+    group: "Mechanical Design & PLM",
+    items: [
+      "CATIA V5",
+      "VPM / ENOVIA PLM (PASS, TREND)",
+      "Assembly Interference & Clearance Analysis",
+    ],
+  },
+  {
+    group: "Embedded Systems & Hardware",
+    items: ["Raspberry Pi", "PCB Development"],
+  },
+  {
+    group: "Programming & Backend",
+    items: ["Python", "MATLAB", "Git", "pytest", "FastAPI", "PostgreSQL", "Alembic"],
+  },
+  {
+    group: "Machine Learning & Data",
+    items: ["scikit-learn", "Gaussian Process Regression", "DBSCAN", "YOLOv5", "SHAP", "pandas"],
+  },
+  {
+    group: "Other",
+    items: ["LaTeX"],
+  },
 ];
 
 export const training = [
-  "Neural Networks and Deep Learning — DeepLearning.AI (Mar 2024)",
-  "Supervised Machine Learning: Regression and Classification — DeepLearning.AI (Jan 2024)",
+  {
+    title: "Neural Networks and Deep Learning",
+    detail: "DeepLearning.AI",
+    date: "Mar 2024",
+  },
+  {
+    title: "Supervised Machine Learning: Regression and Classification",
+    detail: "DeepLearning.AI",
+    date: "Jan 2024",
+  },
 ];
 
 /**

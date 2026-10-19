@@ -1,4 +1,5 @@
 // Site content, kept in step with the CV. Text inside **double asterisks** renders bold.
+// Recommit to trigger CI/deploy: 2026-10-19T17:30:00Z
 
 export type Link = { label: string; href: string; internal?: boolean };
 

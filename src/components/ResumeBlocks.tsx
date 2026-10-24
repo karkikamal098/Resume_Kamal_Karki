@@ -17,15 +17,15 @@ export const Rich = ({ text }: { text: string }) => (
 );
 
 export const Section = ({ id, title, children }: { id: string; title: string; children: ReactNode }) => (
-  <section id={id} className="mb-8">
-    <h2 className="text-xl sm:text-2xl font-medium text-foreground mb-3">{title}</h2>
+  <section id={id} className="mb-5">
+    <h2 className="text-xl sm:text-2xl font-medium text-foreground mb-2.5">{title}</h2>
     {children}
   </section>
 );
 
 export const GalleryStrip = ({ slug }: { slug: GallerySlug }) => (
   <Link to={`/${slug}`} className="grid grid-cols-3 gap-2 mt-3 group" aria-label={`Open ${galleries[slug].title} photos`}>
-    {galleries[slug].photos.slice(0, 3).map((p) => (
+    {galleries[slug].photos.map((p) => (
       <img
         key={p.src}
         src={p.src}
@@ -103,4 +103,11 @@ export const EntryCard = ({ entry }: { entry: Entry }) => (
       )}
     </CardContent>
   </Card>
+);
+
+export const SectionLink = ({ to, label }: { to: string; label: string }) => (
+  <Link to={to} className="inline-flex items-center text-sm font-medium text-primary hover:underline">
+    {label}
+    <ArrowRight className="ml-1 h-4 w-4" />
+  </Link>
 );

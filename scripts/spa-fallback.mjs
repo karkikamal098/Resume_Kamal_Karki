@@ -3,7 +3,8 @@
 // 404.html catches any other path and lets the app render its Not Found page.
 import { copyFileSync, mkdirSync } from "node:fs";
 
-const routes = ["robotics", "maps", "saakshar-nepal"];
+// Keep in step with sitePages (src/pages/ResumePages.tsx) and galleries (src/data/resume.ts).
+const routes = ["research", "experience", "leadership", "skills", "robotics", "maps", "saakshar-nepal"];
 
 for (const route of routes) {
   mkdirSync(`dist/${route}`, { recursive: true });

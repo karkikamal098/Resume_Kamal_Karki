@@ -3,7 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import SiteLayout from "./components/SiteLayout";
+import { sitePages } from "./pages/ResumePages";
 import Gallery from "./pages/Gallery";
 import { GallerySlug, galleries } from "./data/resume";
 import NotFound from "./pages/NotFound";
@@ -17,7 +18,11 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route element={<SiteLayout />}>
+            {sitePages.map((p) => (
+              <Route key={p.path} path={p.path} element={<p.page />} />
+            ))}
+          </Route>
           {(Object.keys(galleries) as GallerySlug[]).map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<Gallery slug={slug} />} />
           ))}

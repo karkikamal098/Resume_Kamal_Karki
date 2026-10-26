@@ -89,7 +89,7 @@ export const experience: Entry[] = [
       "Prepared validation scenarios and analyzed system responses against expected behavior, investigating discrepancies across multiple **Flight Warning System functions** and their interfaces with other aircraft systems.",
       "Investigated **Flight Warning System defects** by reproducing anomalous warning behavior and examining associated input conditions and system logic to support failure analysis and technical investigation.",
       "Contributed to the failure analysis of a critical aircraft electrical-system issue in the lavatory area, examining associated **Flight Warning System indications** and warning logic to support the technical investigation.",
-      "Developed a **YOLOv5-based computer-vision tool** to convert legacy **SAO logic-circuit diagrams** used in aircraft fault analysis into **interactive web-based circuits**, improving defect-analysis efficiency by **13%**.",
+      "Developed a **YOLOv5 object-detection tool** to recognize logic-gate symbols in legacy **SAO logic-circuit diagrams** and convert them into **interactive web-based circuits**, improving defect-analysis efficiency by **13%**.",
     ],
   },
   {

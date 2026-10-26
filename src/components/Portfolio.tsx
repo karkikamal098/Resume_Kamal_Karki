@@ -1,9 +1,12 @@
+import { useEffect, useRef, useState } from "react";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { EntryCard, Rich, Section } from "@/components/ResumeBlocks";
+import { cn } from "@/lib/utils";
 import {
+  awards,
   contact,
   education,
   entrepreneurship,
@@ -24,12 +27,80 @@ const EntryList = ({ entries }: { entries: typeof experience }) => (
   </div>
 );
 
+// Menu entries; each id must match a <Section id> below.
+const navItems = [
+  { id: "profile", label: "Profile" },
+  { id: "education", label: "Education" },
+  { id: "awards", label: "Awards" },
+  { id: "experience", label: "Experience" },
+  { id: "open-source", label: "Open Source" },
+  { id: "projects", label: "Projects" },
+  { id: "entrepreneurship", label: "Entrepreneurship" },
+  { id: "leadership", label: "Leadership" },
+  { id: "skills", label: "Skills" },
+  { id: "training", label: "Training" },
+];
+
+// Sticky menu that jumps to a section and highlights the one being read.
+const SectionNav = () => {
+  const [active, setActive] = useState(navItems[0].id);
+  const listRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      let current = navItems[0].id;
+      for (const { id } of navItems) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 80) current = id;
+      }
+      // The last sections are short and may never reach the top, so the page bottom selects the last one.
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+        current = navItems[navItems.length - 1].id;
+      }
+      setActive(current);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // On narrow screens the menu scrolls sideways; keep the active item visible.
+  useEffect(() => {
+    const list = listRef.current;
+    const item = list?.querySelector<HTMLElement>(`[data-id="${active}"]`);
+    if (list && item) list.scrollTo({ left: item.offsetLeft - 16, behavior: "smooth" });
+  }, [active]);
+
+  return (
+    <nav aria-label="Sections" className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
+      <div ref={listRef} className="no-scrollbar max-w-4xl mx-auto px-4 sm:px-6 flex gap-1 overflow-x-auto py-2">
+        {navItems.map(({ id, label }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            data-id={id}
+            aria-current={active === id ? "true" : undefined}
+            className={cn(
+              "shrink-0 whitespace-nowrap rounded-full px-3 py-1.5 text-sm transition-colors",
+              active === id
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:bg-secondary hover:text-foreground",
+            )}
+          >
+            {label}
+          </a>
+        ))}
+      </div>
+    </nav>
+  );
+};
+
 const Portfolio = () => {
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-8">
         {/* Header */}
-        <header className="mb-8">
+        <header className="mb-6">
           <h1 className="text-4xl font-semibold text-foreground mb-2">{contact.name}</h1>
           <p className="text-lg text-muted-foreground">Aerospace Engineer · Airbus</p>
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground mt-4">
@@ -64,7 +135,11 @@ const Portfolio = () => {
             */}
           </div>
         </header>
+      </div>
 
+      <SectionNav />
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-6 pb-8">
         <Section id="profile" title="Profile">
           <Card>
             <CardContent className="p-4 sm:p-5">
@@ -77,6 +152,20 @@ const Portfolio = () => {
 
         <Section id="education" title="Education">
           <EntryList entries={education} />
+        </Section>
+
+        <Section id="awards" title="Scholarships & Awards">
+          <Card>
+            <CardContent className="p-4 sm:p-5">
+              <ul className="list-disc pl-5 space-y-1.5 text-foreground">
+                {awards.map((a) => (
+                  <li key={a.title}>
+                    <span className="font-semibold">{a.title}</span>, <Rich text={a.detail} />
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </Section>
 
         <Section id="experience" title="Research & Engineering Experience">

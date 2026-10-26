@@ -31,13 +31,13 @@ export const profile =
 
 export const education: Entry[] = [
   {
-    title: "Bachelor of Engineering in Aerospace Engineering – Full Scholarship",
+    title: "Bachelor of Engineering in Aerospace Engineering",
     org: "Pulchowk Engineering Campus, Tribhuvan University",
     period: "May 2021 – Apr 2025",
     location: "Lalitpur, Nepal",
     bullets: [
-      "**Overall:** 74.16% (First Division) · ≈3.76/4.0 (Scholaro estimate) · **Final semester:** 83.8% · **National Engineering Entrance Rank:** 419 / 18,000+ (top 2.5%)",
-      "**Relevant coursework:** Control Systems, Engineering Dynamics, Theory of Machines, Numerical Methods, Finite Element Method, Continuum Mechanics, Instrumentation & Sensors, Fault Monitoring & Diagnosis, Unmanned Air Vehicle Synthesis, Computer Aided Design & Manufacturing",
+      "**Overall: 74.16% (First Division), 3.75/4 (Scholaro Estimate)** | **Final Semester: 83.8%** | **All Nepal Engineering Entrance Rank: 419/18,000+ (Top 2.5%)**",
+      "**Relevant Coursework:** Control Systems, Engineering Dynamics, Theory of Machines, Numerical Methods, Finite Element Method, Continuum Mechanics, Instrumentation & Sensors, Fault Monitoring & Diagnosis, Unmanned Air Vehicle Synthesis, Computer Aided Design & Manufacturing",
     ],
   },
   {
@@ -46,8 +46,23 @@ export const education: Entry[] = [
     period: "2016 – 2018",
     location: "Biratnagar, Nepal",
     bullets: [
-      "**GPA:** 3.79 / 4.00 · Awarded a **National Examinations Board (NEB) scholarship** for academic excellence.",
+      "**GPA: 3.78 / 4.00** | Awarded a **National Examinations Board (NEB) scholarship**",
     ],
+  },
+];
+
+export const awards: { title: string; detail: string }[] = [
+  {
+    title: "IOE TU Merit Full Scholarship",
+    detail: "Tribhuvan University – Awarded for B.E. in Aerospace Engineering at Pulchowk Engineering Campus.",
+  },
+  {
+    title: "NEB Scholarship for Academic Excellence",
+    detail: "National Examinations Board, Nepal – Awarded for higher secondary education (+2 Science).",
+  },
+  {
+    title: "Nagase Award for Best Engineering Performance",
+    detail: "ABU Robocon 2022, New Delhi – Team placed **3rd overall** in the Asia-Pacific region.",
   },
 ];
 

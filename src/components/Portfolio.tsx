@@ -32,9 +32,9 @@ const navItems = [
   { id: "profile", label: "Profile" },
   { id: "education", label: "Education" },
   { id: "awards", label: "Awards" },
-  { id: "experience", label: "Experience" },
   { id: "open-source", label: "Open Source" },
   { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
   { id: "entrepreneurship", label: "Entrepreneurship" },
   { id: "leadership", label: "Leadership" },
   { id: "skills", label: "Skills" },
@@ -64,16 +64,24 @@ const SectionNav = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // On narrow screens the menu scrolls sideways; keep the active item visible.
+  // On narrow screens the menu scrolls sideways; bring the active item into view only when it is off-screen.
   useEffect(() => {
     const list = listRef.current;
     const item = list?.querySelector<HTMLElement>(`[data-id="${active}"]`);
-    if (list && item) list.scrollTo({ left: item.offsetLeft - 16, behavior: "smooth" });
+    if (!list || !item) return;
+    const listBox = list.getBoundingClientRect();
+    const itemBox = item.getBoundingClientRect();
+    if (itemBox.left < listBox.left || itemBox.right > listBox.right) {
+      list.scrollBy({ left: itemBox.left - listBox.left - 16, behavior: "smooth" });
+    }
   }, [active]);
 
   return (
     <nav aria-label="Sections" className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
-      <div ref={listRef} className="no-scrollbar max-w-4xl mx-auto px-4 sm:px-6 flex gap-1 overflow-x-auto py-2">
+      <div
+        ref={listRef}
+        className="no-scrollbar max-w-6xl mx-auto px-2 sm:px-4 flex [justify-content:safe_center] overflow-x-auto"
+      >
         {navItems.map(({ id, label }) => (
           <a
             key={id}
@@ -81,10 +89,11 @@ const SectionNav = () => {
             data-id={id}
             aria-current={active === id ? "true" : undefined}
             className={cn(
-              "shrink-0 whitespace-nowrap rounded-full px-3 py-1.5 text-sm transition-colors",
+              "relative shrink-0 whitespace-nowrap px-3 py-3 text-sm transition-colors",
+              "after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:rounded-full after:transition-colors",
               active === id
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:bg-secondary hover:text-foreground",
+                ? "text-foreground after:bg-accent"
+                : "text-muted-foreground after:bg-transparent hover:text-foreground",
             )}
           >
             {label}
@@ -168,23 +177,23 @@ const Portfolio = () => {
           </Card>
         </Section>
 
-        <Section id="experience" title="Research & Engineering Experience">
-          <EntryList entries={experience} />
-        </Section>
-
         <Section id="open-source" title="Open-Source Contributions">
           <EntryList entries={openSource} />
         </Section>
 
-        <Section id="projects" title="Selected Research & Technical Projects">
+        <Section id="projects" title="Selected Research & Engineering Projects">
           <EntryList entries={projects} />
+        </Section>
+
+        <Section id="experience" title="Engineering Experience">
+          <EntryList entries={experience} />
         </Section>
 
         <Section id="entrepreneurship" title="Entrepreneurship & Technology Initiatives">
           <EntryList entries={entrepreneurship} />
         </Section>
 
-        <Section id="leadership" title="Leadership & Engineering Activities">
+        <Section id="leadership" title="Leadership">
           <EntryList entries={leadership} />
         </Section>
 

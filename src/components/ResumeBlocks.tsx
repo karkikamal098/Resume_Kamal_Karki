@@ -42,25 +42,36 @@ export const EntryCard = ({ entry }: { entry: Entry }) => (
   <Card>
     <CardContent className="p-4 sm:p-5">
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-2">
+        {/* As in the CV: organisation first, role in italics underneath. Entries without an org use the title as heading. */}
         <div>
-          <h3 className="text-lg font-medium text-foreground">{entry.title}</h3>
-          {entry.org && (
-            <p className="text-accent font-medium">
-              {entry.orgHref ? (
-                <a href={entry.orgHref} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  {entry.org}
-                </a>
-              ) : (
-                entry.org
-              )}
-            </p>
-          )}
+          <h3 className="text-lg font-semibold text-foreground">
+            {entry.org && entry.orgHref ? (
+              <a href={entry.orgHref} target="_blank" rel="noopener noreferrer" className="hover:text-accent hover:underline">
+                {entry.org}
+              </a>
+            ) : (
+              entry.org ?? entry.title
+            )}
+          </h3>
+          {entry.org && <p className="italic text-muted-foreground">{entry.title}</p>}
         </div>
         <div className="text-sm text-muted-foreground sm:text-right shrink-0">
           <div>{entry.period}</div>
           {entry.location && <div>{entry.location}</div>}
         </div>
       </div>
+
+      {entry.stats && (
+        <dl className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-3">
+          {entry.stats.map((s) => (
+            <div key={s.label} className="rounded-md border border-border bg-secondary/50 px-3 py-2">
+              <dt className="text-xs uppercase tracking-wide text-muted-foreground">{s.label}</dt>
+              <dd className="text-lg font-semibold text-foreground">{s.value}</dd>
+              {s.note && <dd className="text-xs text-muted-foreground">{s.note}</dd>}
+            </div>
+          ))}
+        </dl>
+      )}
 
       <ul className="list-disc pl-5 space-y-1.5 text-foreground">
         {entry.bullets.map((b, i) => (

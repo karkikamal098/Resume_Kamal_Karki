@@ -10,6 +10,8 @@ export type Entry = {
   orgHref?: string;
   period: string;
   location?: string;
+  /** Headline figures shown as small boxes above the bullets (e.g. grades). */
+  stats?: { label: string; value: string; note?: string }[];
   bullets: string[];
   tags?: string[];
   links?: Link[];
@@ -20,14 +22,14 @@ export type Entry = {
 export const contact = {
   name: "Kamal Karki",
   location: "Morang, Nepal",
-  phone: "+977 9768448066",
+  phone: "+977 9804023531",
   email: "077bas016.kamal@pcampus.edu.np",
   linkedin: "https://www.linkedin.com/in/kamal-karki-16a926213",
   github: "https://github.com/karkikamal098",
 };
 
 export const profile =
-  "Aerospace engineer at **Airbus** working on **A320 cabin design**, with experience in **engineering automation, machine learning, robotics, scientific computing, and data-driven materials research**. Built **ML-assisted tools for aircraft-system analysis and design reuse**, while also contributing to **open-source robotics and scientific computing projects**. Interested in applied research at the intersection of **robotics, dynamics, control, and mechatronics**, with a focus on **mechanical design and intelligent engineering systems**.";
+  "Aerospace engineer at **Airbus** with research interests in **robotics, robot dynamics, motion control, and mechatronic systems**. Contribute to the open-source **Robotics Toolbox for Python**, with work on manipulator inverse kinematics and rigid-body dynamics, complemented by hands-on robot development spanning mechanism design, electronics integration, and **PID-based speed control** through ABU Robocon. Seeking thesis-based graduate research opportunities in Design, robotics and control within Mechanical/Aerospace Engineering and related engineering departments.";
 
 export const education: Entry[] = [
   {
@@ -35,8 +37,12 @@ export const education: Entry[] = [
     org: "Pulchowk Engineering Campus, Tribhuvan University",
     period: "May 2021 – Apr 2025",
     location: "Lalitpur, Nepal",
+    stats: [
+      { label: "Overall", value: "74.16%", note: "First Division · 3.75/4 (Scholaro Estimate)" },
+      { label: "Final Semester", value: "83.8%" },
+      { label: "Entrance Rank", value: "419 / 18,000+", note: "Top 2.5% · All Nepal Engineering Entrance" },
+    ],
     bullets: [
-      "**Overall: 74.16% (First Division), 3.75/4 (Scholaro Estimate)** | **Final Semester: 83.8%** | **All Nepal Engineering Entrance Rank: 419/18,000+ (Top 2.5%)**",
       "**Relevant Coursework:** Control Systems, Engineering Dynamics, Theory of Machines, Numerical Methods, Finite Element Method, Continuum Mechanics, Instrumentation & Sensors, Fault Monitoring & Diagnosis, Unmanned Air Vehicle Synthesis, Computer Aided Design & Manufacturing",
     ],
   },
@@ -45,9 +51,8 @@ export const education: Entry[] = [
     org: "Kantipur Higher Secondary School",
     period: "2016 – 2018",
     location: "Biratnagar, Nepal",
-    bullets: [
-      "**GPA: 3.78 / 4.00** | Awarded a **National Examinations Board (NEB) scholarship**",
-    ],
+    stats: [{ label: "GPA", value: "3.78 / 4.00" }],
+    bullets: ["Awarded a **National Examinations Board (NEB) scholarship**"],
   },
 ];
 
@@ -68,15 +73,15 @@ export const awards: { title: string; detail: string }[] = [
 
 export const experience: Entry[] = [
   {
-    title: "Associate Engineer – Cabin Design",
+    title: "Associate Engineer – Design",
     org: "Airbus India Private Limited",
     period: "Feb 2026 – Present",
     location: "India",
     bullets: [
-      "Contributing to the **design and development of the Airspace cabin** for the next-generation **A320** family, including research on **improving the attachment of shell partitions**.",
-      "Leading a **sub-team of two engineers** through feasibility studies, design, and drawings end-to-end to resolve manufacturing issues.",
-      "Developed an **ML-based design-reuse system for aircraft customization**, using unsupervised **DBSCAN clustering** and priority-based ranking to retrieve and reuse prior designs, with an estimated savings of **3,500+ engineering hours annually**.",
-      "Working across the aircraft component lifecycle using **VPM and ENOVIA PLM tools**, including **PASS and TREND**, supporting configuration management, engineering-change workflows, assembly checks, and weight-related analyses.",
+      "Design, develop and test **aircraft cabin** using **CATIA**, performing tolerance checks, 3D assembly interference analysis, and clearance assessments to resolve component-fit issues.",
+      "Lead a **sub-team of two engineers** in feasibility studies and root-cause analysis of manufacturing issues, coordinating design modifications with manufacturing teams and assessing manufacturability.",
+      "Work across the aircraft component lifecycle using **VPM and ENOVIA PLM tools, including PASS and TREND**, supporting configuration management, engineering-change workflows, assembly checks, and weight-related analyses.",
+      "Developed an **ML-based aircraft design-reuse system** using **DBSCAN clustering** and priority-based ranking to retrieve prior designs for aircraft customization, with estimated savings of **3,500+ engineering hours annually**.",
     ],
   },
   {
@@ -85,11 +90,11 @@ export const experience: Entry[] = [
     period: "Aug 2025 – Jan 2026",
     location: "India",
     bullets: [
-      "Contributed to the development and validation of **A320/A321 Flight Warning System logic**, evaluating warning activation, suppression, clearing, sequencing, and priority across operating conditions and combinations of aircraft-system inputs.",
+      "Contributed to the **development and validation of A320/A321 Flight Warning System logic**, evaluating warning activation, suppression, clearing, sequencing, and priority across operating conditions and combinations of aircraft-system inputs.",
       "Prepared validation scenarios and analyzed system responses against expected behavior, investigating discrepancies across multiple **Flight Warning System functions** and their interfaces with other aircraft systems.",
       "Investigated **Flight Warning System defects** by reproducing anomalous warning behavior and examining associated input conditions and system logic to support failure analysis and technical investigation.",
-      "Contributed to the failure analysis of a critical aircraft electrical-system issue in the lavatory area, examining associated **Flight Warning System indications** and warning logic to support the technical investigation.",
-      "Developed a **YOLOv5 object-detection tool** to recognize logic-gate symbols in legacy **SAO logic-circuit diagrams** and convert them into **interactive web-based circuits**, improving defect-analysis efficiency by **13%**.",
+      "Contributed to the **failure analysis of a critical aircraft electrical-system issue in the lavatory area**, examining associated Flight Warning System indications and warning logic to support the technical investigation.",
+      "Developed a **YOLOv5 object-detection tool** to recognize logic-gate symbols in legacy **SAO logic-circuit diagrams** and convert them into interactive web-based circuits, improving defect-analysis efficiency by **13%**.",
     ],
   },
   {
@@ -119,7 +124,7 @@ export const experience: Entry[] = [
     location: "Bhaktapur, Nepal",
     bullets: [
       "Designed mechanical components for a modular **PocketQube Training Kit**, translating satellite-system concepts into a hands-on platform for space-engineering education in Nepal.",
-      "Developed and iterated **CATIA V5 designs**, fabricated prototypes through **3D printing**, and performed fit, assembly, and functional testing to refine geometry and manufacturability.",
+      "Developed and iterated **designs**, fabricated prototypes through **3D printing**, and performed fit, assembly, and functional testing to refine geometry and manufacturability.",
     ],
   },
 ];
@@ -134,7 +139,7 @@ export const openSource: Entry[] = [
       "Contributor to the open-source companion library to Peter Corke's *Robotics, Vision and Control*, covering manipulator kinematics, dynamics, and motion planning; pull requests reviewed and merged by the author.",
       "Fixed **rigid-body dynamics** for URDF robot models with rotated inertial frames by transforming inertia tensors into the link frame (Iₗᵢₙₖ = R I Rᵀ), correcting inverse dynamics, mass-matrix, and Coriolis computations.",
       "Corrected the **Gauss–Newton inverse-kinematics solver** to solve the weighted normal equations (JᵀWJ)⁻¹JᵀWe, restoring task-space error weighting.",
-      "Redesigned **URDF/xacro robot-model loading** to report the failing stage, XML element, and line through a structured exception, backed by **13 regression tests**.",
+      "Redesigned **URDF/xacro robot-model loading** to report the failing stage, XML element, and line through a structured exception, backed by 13 regression tests.",
     ],
   },
   {
@@ -155,18 +160,32 @@ export const projects: Entry[] = [
     period: "Jun 2024 – Feb 2025",
     tags: ["FDM", "Materials Testing", "Machine Learning"],
     bullets: [
-      "Tested how nozzle temperature, infill pattern, and infill density affect 3D-printed PLA+ (**ASTM D638** tensile, compression, and damping tests); rule-of-mixtures analysis indicated negligible load transfer from embedded steel-wire reinforcement (η ≈ 0 for two- and three-wire configurations).",
+      "Tested how nozzle temperature, infill pattern, and infill density affect 3D-printed PLA+ (**ASTM D638** tensile, compression, and damping tests); rule-of-mixtures analysis indicated **negligible load transfer** from embedded steel-wire reinforcement (η ≈ 0 for two- and three-wire configurations).",
       "Built an **ML pipeline** pooling **9 open FDM datasets (172 specimens)** and benchmarked **20 regressors** under nested cross-validation; an **ARD Gaussian process** predicted tensile strength with **RMSE 6.2 MPa (R² 0.90)**.",
-      "Model interpretation (**SHAP**, partial dependence) identified **infill density** as the dominant process effect; cross-laboratory validation showed published data captured strength trends but required calibration specimens for absolute predictions.",
+      "Model interpretation (SHAP, partial dependence) identified **infill density** as the dominant process effect; cross-laboratory validation showed published datasets captured **strength trends** but required calibration specimens for absolute predictions.",
     ],
+  },
+  {
+    title: "Robotics Engineer",
+    org: "Robotics Club, Pulchowk Campus",
+    period: "Mar 2022 – Jan 2023",
+    location: "Lalitpur, Nepal",
+    bullets: [
+      "Contributed across the **end-to-end development of Robot A (Thrower)** for ABU Robocon 2022, spanning mechanical design, fabrication, electronics, PCB development, and integration of the robot’s hardware and control systems.",
+      "Designed and built a **dual-rotational throwing mechanism** and implemented **PID-based speed control** to regulate its rotational speed, combining mechanical mechanism design with feedback control.",
+      "Developed and integrated electronic hardware and contributed to the robot’s **leg-control and motion systems**, using Raspberry Pi hardware as part of the robot’s control setup.",
+      "Contributed to the team that secured **third place in the Asia-Pacific region** and received the **Nagase Award for Best Engineering Performance** at ABU Robocon 2022 in New Delhi, India.",
+    ],
+    links: [{ label: "Robotics photos", href: "/robotics", internal: true }],
+    gallery: "robotics",
   },
   {
     title: "SWIFT: Conceptual Design of a Mid-Range Commercial Aircraft",
     period: "Mar 2024 – Apr 2024",
-    tags: ["Plane-Maker", "X-Plane"],
+    tags: ["Departmental Poster Presentation"],
     bullets: [
       "Co-designed a **30-passenger, twin-turbofan aircraft** with a **5,000 km design range**, performing preliminary weight estimation, wing and tail sizing, airfoil selection, and landing-gear configuration.",
-      "Evaluated flight performance and dynamic stability using analytical calculations and simulation, analyzing short-period, phugoid, Dutch-roll, and spiral modes and assessing handling qualities with a **Cooper–Harper rating of 3**.",
+      "Evaluated **flight performance and dynamic stability** using analytical calculations and simulation, analyzing short-period, phugoid, Dutch-roll, and spiral modes and assessing handling qualities with a **Cooper–Harper rating of 3**.",
     ],
   },
   {
@@ -183,8 +202,8 @@ export const projects: Entry[] = [
     period: "Sep 2021 – Nov 2021",
     tags: ["CATIA V5"],
     bullets: [
-      "Designed and modeled a **blended-wing-body UAV** airframe using **CATIA V5**, integrating power systems, motors, and an engine for optimal aerodynamic stability.",
-      "Configured custom **Arduino-based flight controllers and avionics**, conducting extensive ground and flight testing to validate control response and system performance.",
+      "Designed and modeled a blended-wing-body UAV airframe using **CATIA V5**, integrating power systems, motors, and an engine for optimal aerodynamic stability.",
+      "Configured custom **Arduino**-based flight controllers and avionics, conducting extensive ground and flight testing to validate control response and system performance.",
     ],
   },
 ];
@@ -196,7 +215,7 @@ export const entrepreneurship: Entry[] = [
     period: "2024",
     location: "Nepal",
     bullets: [
-      "Developed and launched an **EdTech mobile app** focused on government service examinations using **Flutter and Node.js**.",
+      "Developed and launched an **EdTech mobile app focused on government service examinations** using **Flutter** and **Node.js**.",
       "Delivered a **low-latency video service**, growing the platform to **3,000+ users**.",
       "Secured an institutional sale of **NPR 500K** to one of Nepal's largest educational institutes.",
     ],
@@ -208,7 +227,7 @@ export const entrepreneurship: Entry[] = [
     period: "2024",
     location: "Nepal",
     bullets: [
-      "Co-founded **Beemalaya**, an **insurance aggregator platform for Nepal** that lets users compare and access insurance products in one place.",
+      "Co-founded Beemalaya, an **insurance aggregator platform for Nepal** that lets users compare and access insurance products in one place.",
       "Raised **NPR 1.1M in angel funding** to build and scale the platform.",
       "Led technical execution, implementation, and user-oriented product iterations.",
     ],
@@ -219,21 +238,7 @@ const saaksharFacebook = "https://www.facebook.com/people/%E0%A4%B8%E0%A4%BE%E0%
 
 export const leadership: Entry[] = [
   {
-    title: "Robotics Engineer",
-    org: "Robotics Club, Pulchowk Campus",
-    period: "Mar 2022 – Jan 2023",
-    location: "Lalitpur, Nepal",
-    bullets: [
-      "Contributed across the end-to-end development of **Robot A (Thrower)** for **ABU Robocon 2022**, spanning mechanical design, fabrication, electronics, PCB development, and integration of the robot’s hardware and control systems.",
-      "Designed and built a **dual-rotational throwing mechanism** and implemented **PID-based speed control** to regulate its rotational speed, combining mechanism design with feedback control.",
-      "Developed and integrated electronic hardware and contributed to the robot’s leg-control and motion systems, using **Raspberry Pi** hardware as part of the robot’s control setup.",
-      "Contributed to the team that secured **third place in the Asia-Pacific region** and received the **Nagase Award for Best Engineering Performance** at **ABU Robocon 2022** in New Delhi, India.",
-    ],
-    links: [{ label: "Robotics photos", href: "/robotics", internal: true }],
-    gallery: "robotics",
-  },
-  {
-    title: "Vice President (Dec 2023 – Dec 2024) · Treasurer (Jul 2022 – Dec 2023)",
+    title: "Vice President (Dec 2023 – Dec 2024) | Treasurer (Jul 2022 – Dec 2023)",
     org: "Maths and Physics Society (MAPS), Pulchowk Campus",
     period: "Jul 2022 – Dec 2024",
     location: "Lalitpur, Nepal",
@@ -269,7 +274,7 @@ export const skills: { group: string; items: string[] }[] = [
   },
   {
     group: "Mechanical Design & PLM",
-    items: ["CATIA V5", "VPM", "ENOVIA PLM", "Assembly Interference and Clearance Analysis", "Tolerance Checks", "Configuration Management"],
+    items: ["CATIA V5", "SolidWorks", "VPM", "ENOVIA PLM (PASS, TREND)", "Assembly Interference and Clearance Analysis", "Tolerance Checks", "Configuration Management"],
   },
   {
     group: "Embedded Systems & Hardware",

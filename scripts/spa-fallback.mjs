@@ -4,7 +4,11 @@
 import { copyFileSync, mkdirSync } from "node:fs";
 
 // Keep in step with sitePages (src/pages/ResumePages.tsx) and galleries (src/data/resume.ts).
-const routes = ["research", "experience", "leadership", "skills", "robotics", "maps", "saakshar-nepal"];
+const routes = [
+  "education", "open-source", "projects", "experience", "ventures", "leadership", "skills",
+  "robotics", "maps", "saakshar-nepal",
+  "research", // old page, redirects to /open-source
+];
 
 for (const route of routes) {
   mkdirSync(`dist/${route}`, { recursive: true });

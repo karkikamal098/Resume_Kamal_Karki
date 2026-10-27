@@ -6,6 +6,8 @@ export type GallerySlug = "robotics" | "maps" | "saakshar-nepal";
 
 export type Entry = {
   title: string;
+  /** Shorter label for the entry list in a tab, when the title is long. */
+  short?: string;
   org?: string;
   orgHref?: string;
   period: string;
@@ -157,6 +159,7 @@ export const openSource: Entry[] = [
 export const projects: Entry[] = [
   {
     title: "Investigation of the Effects of Printing Parameters and Reinforcement on the Mechanical Properties of 3D-Printed PLA+ Composites",
+    short: "Mechanical Properties of 3D-Printed PLA+ Composites",
     period: "Jun 2024 – Feb 2025",
     tags: ["FDM", "Materials Testing", "Machine Learning"],
     bullets: [

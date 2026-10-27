@@ -1,16 +1,46 @@
 import { useEffect } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
-import { ArrowRight, Linkedin, Mail, Phone } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { contact } from "@/data/resume";
 import { sitePages } from "@/pages/ResumePages";
 
-// Shared frame for the resume pages: top bar with the page menu, a "Next" link, and a contact footer.
+const ContactLinks = ({ className }: { className?: string }) => (
+  <ul className={cn("space-y-2", className)}>
+    <li>
+      <a href={`mailto:${contact.email}`} className="flex items-start gap-2.5 hover:underline underline-offset-4">
+        <Mail className="mt-0.5 w-4 h-4 shrink-0" />
+        {/* Allow the line to break after the @ rather than mid-word. */}
+        <span className="[overflow-wrap:anywhere]">
+          {contact.email.split("@")[0]}@<wbr />
+          {contact.email.split("@")[1]}
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="flex items-center gap-2.5 hover:underline underline-offset-4">
+        <Phone className="w-4 h-4 shrink-0" />
+        {contact.phone}
+      </a>
+    </li>
+    <li className="flex items-center gap-2.5">
+      <MapPin className="w-4 h-4 shrink-0" />
+      {contact.location}
+    </li>
+    <li>
+      <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 hover:underline underline-offset-4">
+        <Linkedin className="w-4 h-4 shrink-0" />
+        LinkedIn
+      </a>
+    </li>
+  </ul>
+);
+
+// App-style frame: a navy sidebar with the tabs and contact details, and one tab shown at a time beside it.
+// On phones the sidebar becomes a top bar with the tabs in a sideways-scrolling row.
 const SiteLayout = () => {
   const { pathname } = useLocation();
-  const index = sitePages.findIndex((p) => p.path === pathname);
-  const page = sitePages[index];
-  const next = index >= 0 ? sitePages[index + 1] : undefined;
+  const page = sitePages.find((p) => p.path === pathname);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,69 +48,51 @@ const SiteLayout = () => {
   }, [pathname, page]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-          <Link to="/" className="pt-3 sm:py-3 text-[15px] font-semibold tracking-tight text-brand">
+    <div className="min-h-screen bg-secondary/40 lg:flex lg:h-screen lg:overflow-hidden">
+      <aside className="bg-brand text-white lg:flex lg:w-72 lg:shrink-0 lg:flex-col">
+        <div className="px-5 pt-6 pb-3 sm:px-8 lg:px-7 lg:pt-10 lg:pb-8">
+          <Link to="/" className="text-2xl font-semibold tracking-tight">
             {contact.name}
           </Link>
-          <nav aria-label="Pages" className="no-scrollbar -mx-3 flex overflow-x-auto">
-            {sitePages.map((p) => (
-              <NavLink
-                key={p.path}
-                to={p.path}
-                end
-                className={({ isActive }) =>
-                  cn(
-                    "relative shrink-0 whitespace-nowrap px-3 py-3 text-sm transition-colors",
-                    "after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:rounded-full after:transition-colors",
-                    isActive
-                      ? "text-brand after:bg-brand"
-                      : "text-muted-foreground after:bg-transparent hover:text-foreground",
-                  )
-                }
-              >
-                {p.label}
-              </NavLink>
-            ))}
-          </nav>
+          <p className="mt-1 text-sm text-white/70">Aerospace Engineer · Airbus</p>
         </div>
-      </header>
 
-      <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 pb-12">
-        <Outlet />
-        {next && (
-          <div className="border-t border-border pt-6">
-            <Link
-              to={next.path}
-              className="group inline-flex items-center gap-2 text-sm font-medium text-brand hover:underline underline-offset-4"
+        <nav aria-label="Sections" className="no-scrollbar flex gap-1 overflow-x-auto px-3 pb-3 sm:px-6 lg:flex-col lg:overflow-visible lg:px-4 lg:pb-0">
+          {sitePages.map(({ path, label, icon: Icon }) => (
+            <NavLink
+              key={path}
+              to={path}
+              end
+              className={({ isActive }) =>
+                cn(
+                  "flex shrink-0 items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors",
+                  isActive ? "bg-white/15 font-medium text-white" : "text-white/70 hover:bg-white/5 hover:text-white",
+                )
+              }
             >
-              Next: {next.label}
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-          </div>
-        )}
-      </main>
+              <Icon className="w-4 h-4" />
+              {label}
+            </NavLink>
+          ))}
+        </nav>
 
-      <footer className="border-t border-border">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm text-muted-foreground">
-          <div className="flex flex-wrap gap-x-5 gap-y-2">
-            <a href={`mailto:${contact.email}`} className="flex items-center gap-2 hover:text-foreground">
-              <Mail className="w-4 h-4" />
-              <span className="break-all">{contact.email}</span>
-            </a>
-            <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="flex items-center gap-2 hover:text-foreground">
-              <Phone className="w-4 h-4" />
-              {contact.phone}
-            </a>
-            <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-foreground">
-              <Linkedin className="w-4 h-4" />
-              LinkedIn
-            </a>
-          </div>
-          <span>© {new Date().getFullYear()} {contact.name}</span>
+        <div className="hidden lg:block mt-auto px-7 pb-8 text-[13px] text-white/75">
+          <ContactLinks />
+          <p className="mt-6 text-white/50">© {new Date().getFullYear()} {contact.name}</p>
         </div>
-      </footer>
+      </aside>
+
+      <main className="flex-1 lg:overflow-y-auto">
+        <div className="max-w-6xl px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
+          {page && <h1 className="mb-8 text-3xl font-semibold tracking-tight text-brand">{page.heading}</h1>}
+          <Outlet />
+        </div>
+
+        <footer className="lg:hidden border-t border-border px-5 py-6 sm:px-8 text-sm text-muted-foreground">
+          <ContactLinks />
+          <p className="mt-4">© {new Date().getFullYear()} {contact.name}</p>
+        </footer>
+      </main>
     </div>
   );
 };

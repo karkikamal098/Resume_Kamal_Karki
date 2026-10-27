@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import SiteLayout from "./components/SiteLayout";
 import { sitePages } from "./pages/ResumePages";
 import Gallery from "./pages/Gallery";
@@ -23,6 +23,8 @@ const App = () => (
               <Route key={p.path} path={p.path} element={<p.page />} />
             ))}
           </Route>
+          {/* Page from the previous layout; keep old links working. */}
+          <Route path="/research" element={<Navigate to="/open-source" replace />} />
           {(Object.keys(galleries) as GallerySlug[]).map((slug) => (
             <Route key={slug} path={`/${slug}`} element={<Gallery slug={slug} />} />
           ))}

@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Check, Download, Link2, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GallerySlug, contact, galleries } from "@/data/resume";
 import { sitePages } from "@/pages/ResumePages";
@@ -36,6 +36,45 @@ const ContactLinks = ({ className }: { className?: string }) => (
   </ul>
 );
 
+// Download the CV PDF, or copy its link to paste into an email or message.
+const CvActions = () => {
+  const [copied, setCopied] = useState(false);
+  const url = `${window.location.origin}${contact.cv}`;
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(url);
+    } catch {
+      window.prompt("Copy the CV link:", url);
+      return;
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="mt-4 flex gap-2">
+      <a
+        href={contact.cv}
+        download="Kamal_Karki_CV.pdf"
+        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md bg-white px-3 py-2 text-sm font-medium text-brand shadow-sm transition-colors hover:bg-white/90"
+      >
+        <Download className="w-4 h-4" />
+        Download CV
+      </a>
+      <button
+        type="button"
+        onClick={copy}
+        title={url}
+        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border border-white/30 px-2.5 py-2 text-sm text-white/90 transition-colors hover:bg-white/10"
+      >
+        {copied ? <Check className="w-4 h-4" /> : <Link2 className="w-4 h-4" />}
+        {copied ? "Copied" : "Copy link"}
+      </button>
+    </div>
+  );
+};
+
 // App-style frame: a navy sidebar with the tabs and contact details, and one tab shown at a time beside it.
 // On phones the sidebar becomes a top bar with the tabs in a sideways-scrolling row.
 const SiteLayout = () => {
@@ -57,6 +96,7 @@ const SiteLayout = () => {
             {contact.name}
           </Link>
           <p className="mt-1 text-sm text-white/70">Aerospace Engineer · Airbus</p>
+          <CvActions />
         </div>
 
         <nav aria-label="Sections" className="no-scrollbar flex gap-1 overflow-x-auto px-3 pb-3 sm:px-6 lg:flex-col lg:overflow-visible lg:px-4 lg:pb-0">

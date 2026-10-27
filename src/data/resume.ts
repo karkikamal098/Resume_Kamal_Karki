@@ -28,6 +28,8 @@ export const contact = {
   email: "077bas016.kamal@pcampus.edu.np",
   linkedin: "https://www.linkedin.com/in/kamal-karki-16a926213",
   github: "https://github.com/karkikamal098",
+  // The CV PDF, served from public/. Shareable as https://www.kamalkarki1.com.np/Kamal_Karki_CV.pdf
+  cv: "/Kamal_Karki_CV.pdf",
 };
 
 export const profile =

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { contact } from "@/data/resume";
+import { GallerySlug, contact, galleries } from "@/data/resume";
 import { sitePages } from "@/pages/ResumePages";
 
 const ContactLinks = ({ className }: { className?: string }) => (
@@ -41,6 +41,8 @@ const ContactLinks = ({ className }: { className?: string }) => (
 const SiteLayout = () => {
   const { pathname } = useLocation();
   const page = sitePages.find((p) => p.path === pathname);
+  // A photo page keeps the tab it belongs to highlighted (e.g. /maps → Leadership).
+  const activePath = page?.path ?? galleries[pathname.slice(1) as GallerySlug]?.section.path;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -59,20 +61,18 @@ const SiteLayout = () => {
 
         <nav aria-label="Sections" className="no-scrollbar flex gap-1 overflow-x-auto px-3 pb-3 sm:px-6 lg:flex-col lg:overflow-visible lg:px-4 lg:pb-0">
           {sitePages.map(({ path, label, icon: Icon }) => (
-            <NavLink
+            <Link
               key={path}
               to={path}
-              end
-              className={({ isActive }) =>
-                cn(
-                  "flex shrink-0 items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors",
-                  isActive ? "bg-white/15 font-medium text-white" : "text-white/70 hover:bg-white/5 hover:text-white",
-                )
-              }
+              aria-current={path === activePath ? "page" : undefined}
+              className={cn(
+                "flex shrink-0 items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors",
+                path === activePath ? "bg-white/15 font-medium text-white" : "text-white/70 hover:bg-white/5 hover:text-white",
+              )}
             >
               <Icon className="w-4 h-4" />
               {label}
-            </NavLink>
+            </Link>
           ))}
         </nav>
 

@@ -307,15 +307,15 @@ export type Photo = {
   src: string;
   alt: string;
   caption: string;
-  /** Span the full grid width at the photo's own aspect ratio (the first photo always does). */
-  wide?: boolean;
-  /** CSS object-position for the 3:2 crop, e.g. "center 30%" to keep a face in a portrait shot. */
+  /** CSS object-position for the 3:2 thumbnail crop, e.g. "center 30%" to keep a face in a portrait shot. */
   position?: string;
 };
 
 export type Gallery = {
   title: string;
   subtitle: string;
+  /** The tab this gallery belongs to: highlighted in the menu and used for the back link. */
+  section: { path: string; label: string };
   highlights: string[];
   links?: Link[];
   photos: Photo[];
@@ -327,6 +327,7 @@ export const galleries: Record<GallerySlug, Gallery> = {
   robotics: {
     title: "Robotics Club, Pulchowk Campus",
     subtitle: "Robotics Engineer · Mar 2022 – Jan 2023 · Lalitpur, Nepal",
+    section: { path: "/projects", label: "Projects" },
     highlights: [
       "Contributed across the end-to-end development of **Robot A (Thrower)** for **ABU Robocon 2022**, spanning mechanical design, fabrication, electronics, PCB development, and integration of the robot’s hardware and control systems.",
       "Designed and built a **dual-rotational throwing mechanism** and implemented **PID-based speed control** to regulate its rotational speed, combining mechanism design with feedback control.",
@@ -363,6 +364,7 @@ export const galleries: Record<GallerySlug, Gallery> = {
   maps: {
     title: "Maths and Physics Society (MAPS)",
     subtitle: "Pulchowk Campus · Vice President (Dec 2023 – Dec 2024) · Treasurer (Jul 2022 – Dec 2023)",
+    section: { path: "/leadership", label: "Leadership" },
     highlights: [
       "Led strategic planning for society initiatives and organized the national-level **Math and Physics Olympiad and Integration Bee** with **400+ participants**.",
       "Raised **NPR 900K in sponsorship** from startups, companies, and organizations to fund the national-level Olympiad.",
@@ -398,6 +400,7 @@ export const galleries: Record<GallerySlug, Gallery> = {
   "saakshar-nepal": {
     title: "Saakshar Nepal",
     subtitle: "Founding President · Mar 2023 – Mar 2024 · Lalitpur, Nepal",
+    section: { path: "/leadership", label: "Leadership" },
     highlights: [
       "Founded Saakshar Nepal, a social organization delivering robotics and engineering education to **2,000+ students across 15+ schools in six districts**.",
       "Developed and led **hands-on robotics workshops** introducing fundamental engineering concepts, improving STEM accessibility for students below Class 8.",
@@ -454,7 +457,6 @@ export const galleries: Record<GallerySlug, Gallery> = {
         src: "/images/saakshar-nepal/classroom-group.jpg",
         alt: "Volunteer seated with a group of primary-school students in blue uniforms in front of a chalkboard",
         caption: "With primary-school students after a class session.",
-        wide: true,
       },
     ],
   },

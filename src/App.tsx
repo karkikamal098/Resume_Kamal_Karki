@@ -22,12 +22,13 @@ const App = () => (
             {sitePages.map((p) => (
               <Route key={p.path} path={p.path} element={<p.page />} />
             ))}
+            {/* key resets the photo viewer when moving between galleries. */}
+            {(Object.keys(galleries) as GallerySlug[]).map((slug) => (
+              <Route key={slug} path={`/${slug}`} element={<Gallery key={slug} slug={slug} />} />
+            ))}
           </Route>
           {/* Page from the previous layout; keep old links working. */}
           <Route path="/research" element={<Navigate to="/open-source" replace />} />
-          {(Object.keys(galleries) as GallerySlug[]).map((slug) => (
-            <Route key={slug} path={`/${slug}`} element={<Gallery slug={slug} />} />
-          ))}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

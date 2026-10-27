@@ -333,21 +333,17 @@ export const galleries: Record<GallerySlug, Gallery> = {
       "Designed and built a **dual-rotational throwing mechanism** and implemented **PID-based speed control** to regulate its rotational speed, combining mechanism design with feedback control.",
       "Contributed to the team that secured **third place** overall and received the **Nagase Award** at **ABU Robocon 2022** in New Delhi, India.",
     ],
+    // Robocon 2022 photos first; the last two are from the 2023 competition.
     photos: [
-      {
-        src: "/images/robotics/team-with-robots.jpg",
-        alt: "Robotics Club team posing on the practice field with two competition robots and rings",
-        caption: "The Robotics Club team with two of our competition robots on the practice field, Pulchowk Campus.",
-      },
       {
         src: "/images/robotics/robocon-2022-robot.jpg",
         alt: "Competition robot at ABU Robocon 2022 on the arena",
         caption: "Robot A during ABU Robocon 2022 competition runs.",
       },
       {
-        src: "/images/robotics/robot-closeup.jpg",
-        alt: "Close-up of a competition robot with omni wheels, twin rollers and on-board electronics",
-        caption: "Close-up of the robot's launcher and electronics.",
+        src: "/images/robotics/campus-demo.jpg",
+        alt: "Team members watching as a stack of red and blue foam discs is set up for a robot demonstration in a campus hall",
+        caption: "Demonstrating the robot on campus before ABU Robocon 2022.",
       },
       {
         src: "/images/robotics/team-with-faculty.jpg",
@@ -358,6 +354,16 @@ export const galleries: Record<GallerySlug, Gallery> = {
         src: "/images/robotics/club-group.png",
         alt: "Group photo of Robotics Club members in a campus hall",
         caption: "With fellow Robotics Club members, Pulchowk Campus.",
+      },
+      {
+        src: "/images/robotics/team-with-robots.jpg",
+        alt: "Robotics Club team posing on the practice field with two competition robots and rings",
+        caption: "The Robotics Club team with two of our competition robots on the practice field, Pulchowk Campus.",
+      },
+      {
+        src: "/images/robotics/robot-closeup.jpg",
+        alt: "Close-up of a competition robot with omni wheels, twin rollers and on-board electronics",
+        caption: "Close-up of the robot's launcher and electronics.",
       },
     ],
   },
